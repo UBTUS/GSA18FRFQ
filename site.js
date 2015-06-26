@@ -212,9 +212,9 @@ $(document).ready(function (){
 		$('html, body').animate({
 				scrollTop: $("#themeTable").offset().top - 150
 			}, 500);
-		console.log("https://api.fda.gov/food/enforcement.json?search=" + encodeURIComponent('status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"') + "&limit=100");
+		console.log("https://api.fda.gov/food/enforcement.json?search=" + 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"' + "&limit=100");
 		$.get({
-			url: "https://api.fda.gov/food/enforcement.json?search=" + encodeURIComponent('status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"') + "&limit=100",
+			url: "https://api.fda.gov/food/enforcement.json?search=" + 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"' + "&limit=100",
 			dataType: "json",
 			success: function (data) {
 				$("#table_tbody").empty();
