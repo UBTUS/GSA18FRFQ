@@ -73,6 +73,9 @@ $.extend($.easing,
 $(document).ready(function (){
 
     $('nav li a').navScroller();
+	
+	var locationCriteria = "Nationwide";
+	var descriptionCriteria = "";
 
     //section divider icon click gently scrolls to reveal the section
 	$(".sectiondivider").on('click', function(event) {
@@ -106,11 +109,10 @@ $(document).ready(function (){
 		},
 
 		'click': function (event, data) {
-			$('#alert')
-			  .text('Click ' + data.name + ' on map 1')
-			  .stop()
-			  .css('backgroundColor', '#ff0')
-			  .animate({ backgroundColor: '#ddd' }, 1000);
+			$('html, body').animate({
+				scrollTop: $("#searchButton").offset().top
+			}, 500);
+			locationCriteria = data.name;
 		}
 	});
 	
@@ -132,11 +134,10 @@ $(document).ready(function (){
 			},
 
 			'click': function (event, data) {
-				$('#alert')
-				  .text('Click ' + data.name + ' on map 1')
-				  .stop()
-				  .css('backgroundColor', '#ff0')
-				  .animate({ backgroundColor: '#ddd' }, 1000);
+				$('html, body').animate({
+					scrollTop: $("#searchButton").offset().top
+				}, 500);
+				locationCriteria = data.name;
 			}
 		});
 	});
