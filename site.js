@@ -91,7 +91,7 @@ $(document).ready(function (){
         }
 	});
 	
-	$('#map').usmap({
+	$('#usmap').usmap({
                 'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
                 'stateHoverStyles': { fill: '#7BEC00' },
 
