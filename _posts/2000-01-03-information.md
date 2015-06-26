@@ -1,6 +1,6 @@
 ---
 title: "Results"
-bg: green
+bg: white
 color: black
 style: center
 fa-icon: table

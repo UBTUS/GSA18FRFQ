@@ -197,7 +197,7 @@ $(document).ready(function (){
 
 			'click': function (event, data) {
 				$('html, body').animate({
-					scrollTop: $("#searchBox").siblings("h1").offset().top - 75
+					scrollTop: $("#searchBox").siblings("h1").offset().top - 150
 				}, 500);
 				locationCriteria =  '"' + data.name + '"and"' + $.grep(statePairs, function(e) {
 					return e.abbreviation === data.name; 
@@ -210,7 +210,7 @@ $(document).ready(function (){
 		console.log(locationCriteria);
 		console.log($('#searchTextbox').val());
 		$('html, body').animate({
-				scrollTop: $("#themeTable").offset().top - 75
+				scrollTop: $("#themeTable").offset().top - 150
 			}, 500);
 	});
 	
