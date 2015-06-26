@@ -91,6 +91,8 @@ $(document).ready(function (){
         }
 	});
 	
+	$('#usmap').width($('html').width() * .5);
+	$('#usmap').height($('#usmap').width() * .68);
 	$('#usmap').usmap({
 		'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
 		'stateHoverStyles': { fill: '#7BEC00' },
@@ -110,7 +112,9 @@ $(document).ready(function (){
 		}
 	});
 	
-	$('#usmap').resize(function() {
+	$('html').resize(function() {
+		$('#usmap').width($('html').width() * .5);
+		$('#usmap').height($('#usmap').width() * .68);
 		$('#usmap').usmap({
 			'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
 			'stateHoverStyles': { fill: '#7BEC00' },
