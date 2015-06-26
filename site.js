@@ -113,8 +113,7 @@ $(document).ready(function (){
 	});
 	
 	$(window).on('resize', function(){
-		console.log('test');
-		$('#usmap').html('');
+		$('#usmap').replaceWith('<div id="usmap"></div>');
 		$('#usmap').width($('html').width() * .8);
 		$('#usmap').height($('#usmap').width() * .68);
 		$('#usmap').usmap({
