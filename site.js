@@ -213,5 +213,7 @@ $(document).ready(function (){
 				scrollTop: $("#themeTable").offset().top - 75
 			}, 500);
 	});
+	
+	$('#themeTable').DataTable();
 });
 
