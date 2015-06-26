@@ -91,7 +91,7 @@ $(document).ready(function (){
         }
 	});
 	
-	$('#usmap').width($('html').width() * .5);
+	$('#usmap').width($('html').width() * .8);
 	$('#usmap').height($('#usmap').width() * .68);
 	$('#usmap').usmap({
 		'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
@@ -113,8 +113,9 @@ $(document).ready(function (){
 	});
 	
 	$(window).on('resize', function(){
+		console.log('test');
 		$('#usmap').html('');
-		$('#usmap').width($('html').width() * .5);
+		$('#usmap').width($('html').width() * .8);
 		$('#usmap').height($('#usmap').width() * .68);
 		$('#usmap').usmap({
 			'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
