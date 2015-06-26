@@ -135,7 +135,7 @@ $(document).ready(function (){
 
     $('nav li a').navScroller();
 	
-	var locationCriteria = "Nationwide";
+	var locationCriteria = '"Nationwide"';
 
     //section divider icon click gently scrolls to reveal the section
 	$(".sectiondivider").on('click', function(event) {
@@ -214,12 +214,8 @@ $(document).ready(function (){
 			}, 500);
 		
 		$.get({
-			url: "https://api.fda.gov/food/enforcement.json",
-			data: {
-				search: 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"',
-				limit: '100'
-			},
-			datatype: "json",
+			url: "https://api.fda.gov/food/enforcement.json?search=" + encodeURIComponent('status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"') + "&limit=100",
+			dataType: "json",
 			success: function (data) {
 				$("#table_tbody").empty();
 				$.each(data.results, function (index, datab) {                       
