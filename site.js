@@ -175,7 +175,6 @@ $(document).ready(function (){
 			locationCriteria =  '"' + data.name + '"and"' + $.grep(statePairs, function(e) {
 				return e.abbreviation === data.name; 
 			})[0].name + '"';
-			console.log(locationCriteria);
 		}
 	});
 	
@@ -203,9 +202,13 @@ $(document).ready(function (){
 				locationCriteria =  '"' + data.name + '"and"' + $.grep(statePairs, function(e) {
 					return e.abbreviation === data.name; 
 				})[0].name + '"';
-				console.log(locationCriteria);
 			}
 		});
+	});
+	
+	$('#searchButton').click(function() {
+		console.log(locationCriteria);
+		console.log($('#searchTextbox').val());
 	});
 });
 
