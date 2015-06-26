@@ -92,23 +92,43 @@ $(document).ready(function (){
 	});
 	
 	$('#usmap').usmap({
-                'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
-                'stateHoverStyles': { fill: '#7BEC00' },
+		'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
+		'stateHoverStyles': { fill: '#7BEC00' },
 
-                'mouseoverState': {
-                    'HI': function (event, data) {
-                        //return false;
-                    }
-                },
+		'mouseoverState': {
+			'HI': function (event, data) {
+				//return false;
+			}
+		},
 
-                'click': function (event, data) {
-                    $('#alert')
-                      .text('Click ' + data.name + ' on map 1')
-                      .stop()
-                      .css('backgroundColor', '#ff0')
-                      .animate({ backgroundColor: '#ddd' }, 1000);
-                }
-            });
+		'click': function (event, data) {
+			$('#alert')
+			  .text('Click ' + data.name + ' on map 1')
+			  .stop()
+			  .css('backgroundColor', '#ff0')
+			  .animate({ backgroundColor: '#ddd' }, 1000);
+		}
+	});
+	
+	$('#usmap').resize(function() {
+		$('#usmap').usmap({
+			'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
+			'stateHoverStyles': { fill: '#7BEC00' },
 
+			'mouseoverState': {
+				'HI': function (event, data) {
+					//return false;
+				}
+			},
+
+			'click': function (event, data) {
+				$('#alert')
+				  .text('Click ' + data.name + ' on map 1')
+				  .stop()
+				  .css('backgroundColor', '#ff0')
+				  .animate({ backgroundColor: '#ddd' }, 1000);
+			}
+		});
+	});
 });
 
