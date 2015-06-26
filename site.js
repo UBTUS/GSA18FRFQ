@@ -134,6 +134,7 @@ $.extend($.easing,
 $(document).ready(function (){
 
     $('nav li a').navScroller();
+	$('#themeTable').DataTable();
 	
 	var locationCriteria = "Nationwide";
 
@@ -209,6 +210,9 @@ $(document).ready(function (){
 	$('#searchButton').click(function() {
 		console.log(locationCriteria);
 		console.log($('#searchTextbox').val());
+		$('html, body').animate({
+				scrollTop: $("#themeTable").offset().top - 75
+			}, 500);
 	});
 });
 
