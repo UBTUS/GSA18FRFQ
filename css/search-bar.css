@@ -55,7 +55,8 @@ a,a:visited {
 	font:12px/12px 'HelveticaNeue', Helvetica, Arial, sans-serif;
 	margin-right: 5px;
 	padding: 10px;
-	width: 80%;
+	float: left;
+	width: calc(100% - 220px);
 	box-shadow: 0 0 4px rgba(0,0,0,.4) inset, 1px 1px 1px rgba(255,255,255,.75);
 	-moz-box-shadow: 0 0 4px rgba(0,0,0,.4) inset, 1px 1px 1px rgba(255,255,255,.75);
 	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.4) inset, 1px 1px 1px rgba(255,255,255,.75);
@@ -93,7 +94,8 @@ a,a:visited {
 	cursor: pointer;
 	font: 13px/13px 'HelveticaNeue', Helvetica, Arial, sans-serif;
 	padding: 10px;
-	width:15%;
+	float: right;
+	width:200px;
 	box-shadow: 0 0 2px #2692dd inset;
 	-moz-box-shadow: 0 0 2px #2692dd inset;
 	-webkit-box-shadow: 0 0 2px #2692dd inset;
