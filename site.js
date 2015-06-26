@@ -212,7 +212,7 @@ $(document).ready(function (){
 		$('html, body').animate({
 				scrollTop: $("#themeTable").offset().top - 150
 			}, 500);
-		
+		console.log("https://api.fda.gov/food/enforcement.json?search=" + encodeURIComponent('status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"') + "&limit=100");
 		$.get({
 			url: "https://api.fda.gov/food/enforcement.json?search=" + encodeURIComponent('status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"') + "&limit=100",
 			dataType: "json",
