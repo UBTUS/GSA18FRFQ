@@ -1,6 +1,6 @@
 ---
 title: "Results"
-bg: white
+bg: green
 color: black
 style: center
 fa-icon: table
@@ -8,7 +8,7 @@ fa-icon: table
 
 #Recall Notices
 
-<div>
+<div style="background-color: rgba(255, 255, 255, .8); border-radius: 10px;">
 	<table id="themeTable" class="display">
 		<thead>
 			<tr>
