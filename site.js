@@ -112,7 +112,7 @@ $(document).ready(function (){
 		}
 	});
 	
-	$('html').resize(function() {
+	$(window).on('resize', function(){
 		$('#usmap').width($('html').width() * .5);
 		$('#usmap').height($('#usmap').width() * .68);
 		$('#usmap').usmap({
