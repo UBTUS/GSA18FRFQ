@@ -214,7 +214,7 @@ $(document).ready(function (){
 			}, 500);
 		console.log("https://api.fda.gov/food/enforcement.json?search=" + 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"' + "&limit=100");
 		$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"' + "&limit=100",
-			success: function (data) {
+			function (data) {
 				$("#table_tbody").empty();
 				$.each(data.results, function (index, datab) {                       
 					console.log(city);
