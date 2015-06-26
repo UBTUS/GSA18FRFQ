@@ -134,7 +134,6 @@ $.extend($.easing,
 $(document).ready(function (){
 
     $('nav li a').navScroller();
-	$('#themeTable').DataTable();
 	
 	var locationCriteria = "Nationwide";
 
