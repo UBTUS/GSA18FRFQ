@@ -22,7 +22,7 @@ fa-icon: table
 				<th>Distribution pattern</th>
 			</tr>
 		</thead>
-		<tbody id="table_tbody">
+		<tbody id="table_body">
 		</tbody>
 	</table>
 </div>
