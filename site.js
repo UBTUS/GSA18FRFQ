@@ -113,6 +113,7 @@ $(document).ready(function (){
 	});
 	
 	$(window).on('resize', function(){
+		$('#usmap').html('');
 		$('#usmap').width($('html').width() * .5);
 		$('#usmap').height($('#usmap').width() * .68);
 		$('#usmap').usmap({
