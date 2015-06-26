@@ -209,15 +209,26 @@ $(document).ready(function (){
 	$('#searchButton').click(function() {
 		console.log(locationCriteria);
 		console.log();
+		
 		$('html, body').animate({
-				scrollTop: $("#themeTable").offset().top - 150
-			}, 500);
-		console.log("https://api.fda.gov/food/enforcement.json?search=" + 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"' + "&limit=100");
+			scrollTop: $("#themeTable").offset().top - 150
+		}, 500);
+
 		$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"' + "&limit=100",
 			function (data) {
-				$("#table_tbody").empty();
-				$.each(data.results, function (index, datab) {                       
-					console.log(datab);
+				$("#table_body").empty();
+				$.each(data.results, function (index, datab) {
+					$("#table_body")
+					.append($('<tr>')
+					.append($('<td>').html(datab.product_description))
+					.append($('<td>').html(datab.reason_for_recall))
+					.append($('<td>').html(datab.recall_initiation_date))
+					.append($('<td>').html(datab.recall_number))
+					.append($('<td>').html(datab.recalling_firm))
+					.append($('<td>').html(datab.classification))
+					.append($('<td>').html(datab.code_info))
+					.append($('<td>').html(datab.distribution_pattern))
+					);
 				});
 			},
 			'json'
