@@ -110,7 +110,7 @@ $(document).ready(function (){
 
 		'click': function (event, data) {
 			$('html, body').animate({
-				scrollTop: $("#searchButton").parent().offset().top
+				scrollTop: $("#searchButton").closest("h1").offset().top
 			}, 500);
 			locationCriteria = data.name;
 		}
@@ -135,7 +135,7 @@ $(document).ready(function (){
 
 			'click': function (event, data) {
 				$('html, body').animate({
-					scrollTop: $("#searchButton").parent().offset().top
+					scrollTop: $("#searchButton").closest("h1").offset().top
 				}, 500);
 				locationCriteria = data.name;
 			}
