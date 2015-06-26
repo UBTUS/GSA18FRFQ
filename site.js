@@ -217,7 +217,7 @@ $(document).ready(function (){
 			function (data) {
 				$("#table_tbody").empty();
 				$.each(data.results, function (index, datab) {                       
-					console.log(city);
+					console.log(datab);
 				});
 			},
 			'json'
