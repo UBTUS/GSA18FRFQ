@@ -114,9 +114,12 @@ $(document).ready(function (){
 	
 	$(window).on('resize', function(){
 		$('#usmap').replaceWith('<div id="usmap"></div>');
-		$('#usmap').width($('html').width() * .8);
-		$('#usmap').height($('#usmap').width() * .68);
-		$('#usmap').usmap({
+		
+		var $usmap = $('#usmap');
+		
+		$usmap.width($usmap.parent().width() * .9);
+		$usmap.height($usmap.width() * .68);
+		$usmap.usmap({
 			'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
 			'stateHoverStyles': { fill: '#7BEC00' },
 
