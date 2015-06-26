@@ -208,10 +208,26 @@ $(document).ready(function (){
 	
 	$('#searchButton').click(function() {
 		console.log(locationCriteria);
-		console.log($('#searchTextbox').val());
+		console.log();
 		$('html, body').animate({
 				scrollTop: $("#themeTable").offset().top - 150
 			}, 500);
+		
+		$.get({
+			url: "https://api.fda.gov/food/enforcement.json",
+			data: {
+				search: 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"',
+				limit: '100'
+			},
+			datatype: "json",
+			success: function (data) {
+				$("#table_tbody").empty();
+				$.each(data.results, function (index, datab) {                       
+					console.log(city);
+				});
+				
+			}
+		});
 	});
 	
 	$('#themeTable').DataTable();
