@@ -379,11 +379,14 @@ $(document).ready(function (){
 	
 	var currentDate = new Date();
 	currentDate.setDate(1);
-	for (var i = 0; i < 12; i++) {
+	var count = 12;
+	
+	function recursiveFillGraph(currentCount) {
 		var previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
 		var currentDateString = (currentDate.getMonth() == 0 ? currentDate.getFullYear() - 1 : currentDate.getFullYear()) + "-" + (currentDate.getMonth() == 0 ? 12 : currentDate.getMonth()) + "-" + 1;
 		var previousDateString = (previousDate.getMonth() == 0 ? previousDate.getFullYear() - 1 : previousDate.getFullYear()) + "-" + (previousDate.getMonth() == 0 ? 12 : previousDate.getMonth()) + "-" + 1;
 		$.get('https://api.fda.gov/food/enforcement.json?search=recall_initiation_date:[' + previousDateString + '+TO+' + currentDateString + ']&count=classification', function(data) {
+			fdaData.labels.push(months[previousDate.getMonth()] + '-' + previousDate.getFullYear());
 			for (var index = 0; index < data.results.length; index++) {
 				var item = data.results[index];
 				if (item.term === 'i') {
@@ -396,14 +399,20 @@ $(document).ready(function (){
 					fdaData.datasets[2].data.push(item.count);
 				}
 			}
+			currentDate = previousDate;
+			if (currentCount == 0) {
+				var ctx = document.getElementById("myChart").getContext("2d");
+				var myNewChart = new Chart(ctx).Line(fdaData, {
+					responsive: true
+				});
+			} else {
+				recursiveFillGraph(currentCount - 1);
+			}
 		}, 'json');
-		currentDate = previousDate;
+		
 	}
-	console.log(fdaData);
 	
-	var ctx = document.getElementById("myChart").getContext("2d");
-	var myNewChart = new Chart(ctx).Line(fdaData, {
-		responsive: true
-	});
+	recursiveFillGraph(12);
+	console.log(fdaData);
 });
 
