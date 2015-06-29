@@ -74,8 +74,8 @@ a,a:visited {
 	clear: both;
 }
 
-#myLegend span {
-	padding-left: 20px;
+.legend-text {
+	float: left;
 }
 
 .color-box {   
