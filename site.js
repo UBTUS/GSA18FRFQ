@@ -381,8 +381,8 @@ $(document).ready(function (){
 	currentDate.setDate(1);
 	for (var i = 0; i < 12; i++) {
 		var previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
-		var currentDateString = currentDate.getFullYear() + "-" + currentDate.getMonth() + "-" + 1;
-		var previousDateString = previousDate.getFullYear() + "-" + previousDate.getMonth() + "-" + 1;
+		var currentDateString = currentDate.getFullYear() + "-" + (currentDate.getMonth() == 0 ? 12 : currentData.getMonth()) + "-" + 1;
+		var previousDateString = previousDate.getFullYear() + "-" + (previousDate.getMonth() == 0 ? 12 : previousDate.getMonth()) + "-" + 1;
 		$.get('https://api.fda.gov/food/enforcement.json?search=recall_initiation_date:[' + previousDateString + '+TO+' + currentDateString + ']&count=classification', function(data) {
 			fdaData.labels.push(months[previousDate.getMonth()] + '-' + previousDate.getFullYear);
 			for (var index = 0; index < data.results.length; index++) {
