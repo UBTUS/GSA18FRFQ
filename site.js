@@ -230,13 +230,13 @@ $(document).ready(function (){
 
 					});
 				} else {
-					$("#table_body").append($('<tr colspan="8">').html("Your query yielded no results."));
+					$("#table_body").append($('<tr>').append('.html("Your query yielded no results."));
 				}
 			},
 			'json'
 		).fail(function() {
 			$("#table_body").empty();
-			$("#table_body").append($('<tr>').append($('<td colspan="8"').html('Your search yielded no results!')));
+			$("#table_body").append($('<tr colspan="8">').html("Your query yielded no results."));
 		});
 	});
 	
@@ -284,7 +284,7 @@ $(document).ready(function (){
 				'json'
 			).fail(function() {
 				$("#table_body").empty();
-				$("#table_body").append($('<tr>').append($('<td colspan="8"').html('Your search yielded no results!')));
+				$("#table_body").append($('<tr colspan="8">').html("Your query yielded no results."));
 			});
 		}
 	});
