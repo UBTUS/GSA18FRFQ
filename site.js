@@ -199,15 +199,15 @@ $(document).ready(function (){
 		
 		var searchUrl = 'https://api.fda.gov/food/enforcement.json?search=status:"Ongoing"+AND+distribution_pattern:' + locationCriteria + '+AND+';
 		if ($('#radioDesc').is(':checked')) {
-			searchUrl += "product_description:";
+			searchUrl += "product_description:" + '"' + $('#searchTextbox').val() + '"';
 		} else if ($('#radioManu').is(':checked')) {
-			searchUrl += "product_description.recalling_firm:";
+			searchUrl += "product_description:" + '"' + $('#searchTextbox').val() + '"+' + "recalling_firm:" + '"' + $('#searchTextbox').val() + '"';
 		} else if ($('#radioBatc').is(':checked')) {
-			searchUrl += "code_info.product_description:";
+			searchUrl += "code_info:" + '"' + $('#searchTextbox').val() + '"+' + "product_description:" + '"' + $('#searchTextbox').val() + '"';
 		} else {
-			searchUrl += ":";
+			searchUrl += '"' + $('#searchTextbox').val() + '"';
 		}
-		searchUrl += $('#searchTextbox').val() + '"' + "&limit=10";
+		searchUrl += "&limit=10";
 		
 
 		$.get(searchUrl,
@@ -233,7 +233,9 @@ $(document).ready(function (){
 				}
 			},
 			'json'
-		);
+		).fail(function() {
+			alert('failed');
+		});
 	});
 	
 	$('#searchTextbox').keyup(function(e) {
@@ -249,6 +251,8 @@ $(document).ready(function (){
 				searchUrl += "product_description:" + '"' + $('#searchTextbox').val() + '"+' + "recalling_firm:" + '"' + $('#searchTextbox').val() + '"';
 			} else if ($('#radioBatc').is(':checked')) {
 				searchUrl += "code_info:" + '"' + $('#searchTextbox').val() + '"+' + "product_description:" + '"' + $('#searchTextbox').val() + '"';
+			} else {
+				searchUrl += '"' + $('#searchTextbox').val() + '"';
 			}
 			searchUrl += "&limit=10";
 			
