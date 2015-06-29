@@ -3,5 +3,10 @@
 }
 
 #feedbackContainer {
-	text-align: center;
+	text-align: left;
+}
+
+.ss-q-long {
+	width: 100%;
+	height: 600px;
 }
