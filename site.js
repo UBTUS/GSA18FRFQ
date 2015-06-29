@@ -253,7 +253,7 @@ $(document).ready(function (){
 			} else {
 				searchUrl += ":";
 			}
-			searchUrl += $('#searchTextbox').val() + '"' + "&limit=10";
+			searchUrl += '"' + $('#searchTextbox').val() + '"' + "&limit=10";
 			
 
 			$.get(searchUrl,
