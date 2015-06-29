@@ -348,7 +348,7 @@ $(document).ready(function (){
 				label: "Class I",
 				fillColor: "rgba(255,0,0,0.2)",
 				strokeColor: "rgba(255,0,0,0.2)",
-				pointColor: "rgba(255,0,0,1)",
+				pointColor: "rgba(255,0,0,0.2)",
 				pointStrokeColor: "#fff",
 				pointHighlightFill: "#fff",
 				pointHighlightStroke: "rgba(255,0,0,1)",
@@ -358,7 +358,7 @@ $(document).ready(function (){
 				label: "Class II",
 				fillColor: "rgba(255,255,0,0.2)",
 				strokeColor: "rgba(255,255,0,0.2)",
-				pointColor: "rgba(255,255,0,1)",
+				pointColor: "rgba(255,255,0,0.2)",
 				pointStrokeColor: "#fff",
 				pointHighlightFill: "#fff",
 				pointHighlightStroke: "rgba(255,255,0,1)",
@@ -368,7 +368,7 @@ $(document).ready(function (){
 				label: "Class III",
 				fillColor: "rgba(0,255,0,0.2)",
 				strokeColor: "rgba(0,255,0,0.2)",
-				pointColor: "rgba(0,255,0,1)",
+				pointColor: "rgba(0,255,0,0.2)",
 				pointStrokeColor: "#fff",
 				pointHighlightFill: "#fff",
 				pointHighlightStroke: "rgba(0,255,0,1)",
@@ -411,7 +411,6 @@ $(document).ready(function (){
 				var myNewChart = new Chart(ctx).Line(fdaData, {
 					responsive: true
 				});
-				legend(document.getElementById('myLegend'), fdaData);
 			} else {
 				recursiveFillGraph(currentCount - 1);
 			}
