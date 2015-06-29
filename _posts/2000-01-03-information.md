@@ -8,8 +8,8 @@ fa-icon: table
 
 #Recall Notices
 
-<div style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px;">
-	<table id="themeTable" class="display">
+<div class="table-responsive" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px;">
+	<table id="themeTable" class="table">
 		<thead>
 			<tr>
 				<th>Product</th>
@@ -23,6 +23,9 @@ fa-icon: table
 			</tr>
 		</thead>
 		<tbody id="table_body">
+			<tr>
+				<td colspan="8">You have not yet searched for any recalls.</td>
+			</tr>
 		</tbody>
 	</table>
 </div>

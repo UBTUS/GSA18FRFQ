@@ -235,7 +235,5 @@ $(document).ready(function (){
 			'json'
 		);
 	});
-	
-	$('#themeTable').DataTable();
 });
 
