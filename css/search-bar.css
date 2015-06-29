@@ -78,14 +78,14 @@ a,a:visited {
 	padding-left: 20px;
 }
 
-.color-box {
+.color-box {   
+    float: left;
     width: 10px;
     height: 10px;
-    display: inline-block;
-    background-color: #ccc;
-    position: absolute;
-    left: 5px;
-    top: 5px;
+    margin: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0,0,0,.2);
 }
 
 @media 
