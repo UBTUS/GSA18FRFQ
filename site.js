@@ -376,7 +376,7 @@ $(document).ready(function (){
 		]
 	};
 	
-	var currentDate = getDate();
+	var currentDate = new Date();
 	currentDate.setDay(1);
 	for (var i = 0; i < 12; i++) {
 		var previousDate = new Date(currentDate.getYear(), currentDate.getMonth() - 1, 1);
