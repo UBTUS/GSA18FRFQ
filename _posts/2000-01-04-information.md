@@ -8,6 +8,11 @@ fa-icon: table
 
 #Recall Notices
 
+<div id="shareDiv" style="style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px; width: 100%; display: none;">
+	<h3>Share this Search:</h3>
+	<p id="searchURL"></p>
+</div>
+
 <div class="table-responsive" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px;">
 	<table id="themeTable" class="table">
 		<thead>

@@ -202,14 +202,16 @@ $(document).ready(function (){
 		if ($('#radioDesc').is(':checked')) {
 			searchUrl += "product_description:" + '"' + $('#searchTextbox').val() + '"';
 		} else if ($('#radioManu').is(':checked')) {
-			searchUrl += "product_description:" + '"' + $('#searchTextbox').val() + '"+' + "recalling_firm:" + '"' + $('#searchTextbox').val() + '"';
+			searchUrl += "recalling_firm:" + '"' + $('#searchTextbox').val() + '"+' + '"' + $('#searchTextbox').val() + '"';
 		} else if ($('#radioBatc').is(':checked')) {
-			searchUrl += "code_info:" + '"' + $('#searchTextbox').val() + '"+' + "product_description:" + '"' + $('#searchTextbox').val() + '"';
+			searchUrl += "code_info:" + '"' + $('#searchTextbox').val() + '"+' + '"' + $('#searchTextbox').val() + '"';
 		} else {
 			searchUrl += '"' + $('#searchTextbox').val() + '"';
 		}
 		searchUrl += "&limit=10";
 		
+		$('#shareDiv').show();
+		$('#searchURL').html(searchUrl);
 
 		$.get(searchUrl,
 			function (data) {
@@ -258,6 +260,8 @@ $(document).ready(function (){
 			}
 			searchUrl += "&limit=10";
 			
+			$('#shareDiv').show();
+			$('#searchURL').html(searchUrl);
 
 			$.get(searchUrl,
 				function (data) {
