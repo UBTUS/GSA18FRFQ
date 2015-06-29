@@ -60,6 +60,8 @@ var statePairs = [
     { name: 'WYOMING', abbreviation: 'WY' }
 ];
 
+var locationCriteria = '"Nationwide"';
+
 $.extend($.easing,
 {
     def: 'easeOutQuad',
@@ -190,8 +192,6 @@ function performSearch() {
 $(document).ready(function (){
 
     $('nav li a').navScroller();
-	
-	var locationCriteria = '"Nationwide"';
 
     //section divider icon click gently scrolls to reveal the section
 	$(".sectiondivider").on('click', function(event) {
