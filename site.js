@@ -411,7 +411,7 @@ $(document).ready(function (){
 				var myNewChart = new Chart(ctx).Line(fdaData, {
 					responsive: true
 				});
-				legend(document.getElementById('myLegend'), fdaData);
+				legend(document.getElementById('myChart'), fdaData);
 			} else {
 				recursiveFillGraph(currentCount - 1);
 			}
@@ -419,6 +419,5 @@ $(document).ready(function (){
 	}
 	
 	recursiveFillGraph(12);
-	console.log(fdaData);
 });
 
