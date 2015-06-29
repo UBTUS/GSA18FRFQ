@@ -342,7 +342,7 @@ $(document).ready(function (){
 	//https://api.fda.gov/food/enforcement.json?search=recall_initiation_date:[2014-03-31+TO+2015-03-31]&count=classification
 	
 	var fdaData = {
-		labels: [],
+		labels: ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 		datasets: [
 			{
 				label: "Class I",
@@ -384,7 +384,6 @@ $(document).ready(function (){
 		var currentDateString = (currentDate.getMonth() == 0 ? currentDate.getFullYear() - 1 : currentDate.getFullYear()) + "-" + (currentDate.getMonth() == 0 ? 12 : currentDate.getMonth()) + "-" + 1;
 		var previousDateString = (previousDate.getMonth() == 0 ? previousDate.getFullYear() - 1 : previousDate.getFullYear()) + "-" + (previousDate.getMonth() == 0 ? 12 : previousDate.getMonth()) + "-" + 1;
 		$.get('https://api.fda.gov/food/enforcement.json?search=recall_initiation_date:[' + previousDateString + '+TO+' + currentDateString + ']&count=classification', function(data) {
-			fdaData.labels.push(months[previousDate.getMonth()] + '-' + previousDate.getFullYear());
 			for (var index = 0; index < data.results.length; index++) {
 				var item = data.results[index];
 				if (item.term === 'i') {
