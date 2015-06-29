@@ -253,7 +253,8 @@ $(document).ready(function (){
 	});
 	
 	$('#rssFeed').FeedEk({
-		FeedUrl: 'http://www.fda.gov/AboutFDA/ContactFDA/StayInformed/RSSFeeds/Recalls/rss.xml'
+		FeedUrl: 'http://www.fda.gov/AboutFDA/ContactFDA/StayInformed/RSSFeeds/Recalls/rss.xml',
+		TitleLinkTarget: '_blank'
 	});
 });
 

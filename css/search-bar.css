@@ -52,9 +52,31 @@ a,a:visited {
   text-align: left; 
 }
 
+.rssFeedContainer {
+	width: 40%;
+	float: left;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+.infographicsWelcome {
+	width: 50%;
+	float: right;
+}
+
+
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	.rssFeedContainer {
+		width: 100%;
+	}
+	
+	.infographicsWelcome {
+		width: 100% !important;
+	}
 
 	/* Force table to not be like tables anymore */
 	.table-responsive table, .table-responsive table thead, .table-responsive table tbody, .table-responsive table th, .table-responsive table td, .table-responsive table tr { 
