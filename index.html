@@ -33,9 +33,9 @@
     <nav><ul>
       {% for node in site.posts reversed %}
         {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
-        <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
+        <li class="p-{{id}}" style="float: left;"><a href="#{{id}}">{{node.title}}</a></li>
       {% endfor %}
-	  <li style="float: right; color: #CACACA;">Searching Nationwide</li>
+	  <li id="searchAreaDisplay" style="float: right; color: #CACACA; margin-right: 5px;">Searching Nationwide</li>
     </ul></nav>
 
 

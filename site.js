@@ -149,9 +149,11 @@ function generateUSMap() {
 			$('html, body').animate({
 				scrollTop: $("#searchBox").siblings("h1").offset().top - 75
 			}, 500);
-			locationCriteria =  '"' + data.name + '"and"' + $.grep(statePairs, function(e) {
+			var fullStateName = $.grep(statePairs, function(e) {
 				return e.abbreviation === data.name; 
-			})[0].name + '"and"Nationwide"' ;
+			})[0].name;
+			locationCriteria =  '"' + data.name + '"and"' + fullStateName + '"and"Nationwide"' ;
+			$('#searchAreaDisplay').html('Searching ' + fullStateName);
 		}
 	});
 }
