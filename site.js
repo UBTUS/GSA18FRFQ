@@ -59,6 +59,7 @@ var statePairs = [
     { name: 'WISCONSIN', abbreviation: 'WI'},
     { name: 'WYOMING', abbreviation: 'WY' }
 ];
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var locationCriteria = '"Nationwide"';
 var searchUrl = "";
 
@@ -380,7 +381,22 @@ $(document).ready(function (){
 	currentDate.setDate(1);
 	for (var i = 0; i < 12; i++) {
 		var previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
-		console.log(previousDate.getFullYear() + "-" + previousDate.getMonth() + "-" + 1);
+		var currentDateString = currentDate.getFullYear() + "-" + currentDate.getMonth() + "-" + 1;
+		var previousDateString = previousDate.getFullYear() + "-" + previousDate.getMonth() + "-" + 1;
+		$.get('https://api.fda.gov/food/enforcement.json?search=recall_initiation_date:[' + previousDateString + '+TO+' + currentDateString + ']&count=classification', function(data) {
+			fdaData.labels.push(months[previousDate.getMonth()] + '-' + previousDate.getFullYear);
+			for each (var item in data.results) {
+				if (item.term === 'i') {
+					fdaData.datasets[0].data.push(item.count);
+				}
+				if (item.term === 'ii') {
+					fdaData.datasets[1].data.push(item.count);
+				}
+				if (item.term === 'iii') {
+					fdaData.datasets[2].data.push(item.count);
+				}
+			}
+		}, 'json');
 		currentDate = previousDate;
 	}
 	
