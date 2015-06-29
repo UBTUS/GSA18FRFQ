@@ -65,13 +65,17 @@ a,a:visited {
 	width: calc(100% - 475px);
 }
 
+.feedEkList {
+	width: 100% !important;
+}
+
 
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
 	.rssFeedContainer {
-		width: 470px !important;
+		width: 100% !important;
 		clear: both;
 		float: none;
 		margin-left: auto;
