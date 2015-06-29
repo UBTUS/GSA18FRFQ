@@ -400,6 +400,7 @@ $(document).ready(function (){
 		}, 'json');
 		currentDate = previousDate;
 	}
+	console.log(fdaData);
 	
 	var ctx = document.getElementById("myChart").getContext("2d");
 	var myNewChart = new Chart(ctx).Line(fdaData, {
