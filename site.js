@@ -130,6 +130,31 @@ $.extend($.easing,
     }
 })( jQuery );
 
+function generateUSMap() {
+	var $usmap = $('#usmap');
+	
+	$usmap.width($usmap.parent().width() * .8);
+	$usmap.height($usmap.width() * .68);
+	$usmap.usmap({
+		'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
+		'stateHoverStyles': { fill: '#7BEC00' },
+		showLabels: true,
+		'mouseoverState': {
+			'HI': function (event, data) {
+				//return false;
+			}
+		},
+
+		'click': function (event, data) {
+			$('html, body').animate({
+				scrollTop: $("#searchBox").siblings("h1").offset().top - 75
+			}, 500);
+			locationCriteria =  '"' + data.name + '"and"' + $.grep(statePairs, function(e) {
+				return e.abbreviation === data.name; 
+			})[0].name + '"and"Nationwide"' ;
+		}
+	});
+}
 
 $(document).ready(function (){
 
@@ -154,56 +179,11 @@ $(document).ready(function (){
         }
 	});
 	
-	var $usmap = $('#usmap');
-	
-	$usmap.width($usmap.parent().width() * .8);
-	$usmap.height($usmap.width() * .68);
-	$usmap.usmap({
-		'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
-		'stateHoverStyles': { fill: '#7BEC00' },
-		showLabels: true,
-		'mouseoverState': {
-			'HI': function (event, data) {
-				//return false;
-			}
-		},
-
-		'click': function (event, data) {
-			$('html, body').animate({
-				scrollTop: $("#searchBox").siblings("h1").offset().top - 75
-			}, 500);
-			locationCriteria =  '"' + data.name + '"and"' + $.grep(statePairs, function(e) {
-				return e.abbreviation === data.name; 
-			})[0].name + '"';
-		}
-	});
+	generateUSMap();
 	
 	$(window).on('resize', function(){
 		$('#usmap').replaceWith('<div id="usmap"></div>');
-		
-		var $usmap = $('#usmap');
-		
-		$usmap.width($usmap.parent().width() * .8);
-		$usmap.height($usmap.width() * .68);
-		$usmap.usmap({
-			'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
-			'stateHoverStyles': { fill: '#7BEC00' },
-			showLabels: true,
-			'mouseoverState': {
-				'HI': function (event, data) {
-					//return false;
-				}
-			},
-
-			'click': function (event, data) {
-				$('html, body').animate({
-					scrollTop: $("#searchBox").siblings("h1").offset().top - 150
-				}, 500);
-				locationCriteria =  '"' + data.name + '"and"' + $.grep(statePairs, function(e) {
-					return e.abbreviation === data.name; 
-				})[0].name + '"';
-			}
-		});
+		generateUSMap();
 	});
 	
 	$('#searchButton').click(function() {
@@ -214,7 +194,7 @@ $(document).ready(function (){
 			scrollTop: $("#themeTable").offset().top - 150
 		}, 500);
 
-		$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"' + "&limit=100",
+		$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"' + "&limit=10",
 			function (data) {
 				$("#table_body").empty();
 					$.each(data.results, function (index, datab) {
