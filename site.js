@@ -194,9 +194,10 @@ $(document).ready(function (){
 			scrollTop: $("#themeTable").offset().top - 150
 		}, 500);
 
-		$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status.distribution_pattern.product_description:' + locationCriteria + 'and"' + $('#searchTextbox').val() + '"' + "&limit=10",
+		$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status:"Ongoing"+AND+distribution_pattern:' + locationCriteria + '+AND+product_description:"' + $('#searchTextbox').val() + '"' + "&limit=10",
 			function (data) {
 				$("#table_body").empty();
+				if (data.results.length > 0) {
 					$.each(data.results, function (index, datab) {
 						$("#table_body")
 							.append($('<tr>')
@@ -211,6 +212,9 @@ $(document).ready(function (){
 							);
 
 					});
+				} else {
+					$("#table_body").append($('<tr colspan="8">').html("Your query yielded no results."));
+				}
 			},
 			'json'
 		);
