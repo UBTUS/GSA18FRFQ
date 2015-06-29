@@ -380,7 +380,7 @@ $(document).ready(function (){
 	currentDate.setDate(1);
 	for (var i = 0; i < 12; i++) {
 		var previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
-		console.log(previousDate);
+		console.log(previousDate.getFullYear() + "-" + previousDate.getMonth() + "-" + 1);
 		currentDate = previousDate;
 	}
 	
