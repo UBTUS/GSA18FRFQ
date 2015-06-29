@@ -53,7 +53,7 @@ a,a:visited {
 }
 
 .rssFeedContainer {
-	float: left;
+	float: right;
 	height: 500px;
 	border: 1px solid black;
 	overflow: scroll;
@@ -61,8 +61,8 @@ a,a:visited {
 }
 
 .infographicsWelcome {
-	float: right;
-	width: calc(100% - 475px;);
+	float: left;
+	width: calc(100% - 490px;);
 }
 
 
@@ -71,7 +71,8 @@ only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
 	.rssFeedContainer {
-		width: 100%;
+		width: 470px !important;
+		clear: both;
 	}
 	
 	.infographicsWelcome {
