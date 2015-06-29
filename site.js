@@ -338,42 +338,54 @@ $(document).ready(function (){
 		});
 	}
 	
-	var ctx = document.getElementById("myChart").getContext("2d");
-	var myNewChart = new Chart(ctx).Line({
-		labels: ["January", "February", "March", "April", "May", "June", "July"],
+	//https://api.fda.gov/food/enforcement.json?search=recall_initiation_date:[2014-03-31+TO+2015-03-31]&count=classification
+	
+	var fdaData = {
+		labels: [],
 		datasets: [
 			{
-				label: "My First dataset",
+				label: "Class I",
 				fillColor: "rgba(255,0,0,0.2)",
 				strokeColor: "rgba(255,0,0,0.2)",
 				pointColor: "rgba(255,0,0,0.2)",
 				pointStrokeColor: "#fff",
 				pointHighlightFill: "#fff",
 				pointHighlightStroke: "rgba(255,0,0,1)",
-				data: [65, 59, 80, 81, 56, 55, 40]
+				data: []
 			},
 			{
-				label: "My Second dataset",
+				label: "Class II",
 				fillColor: "rgba(255,255,0,0.2)",
 				strokeColor: "rgba(255,255,0,0.2)",
 				pointColor: "rgba(255,255,0,0.2)",
 				pointStrokeColor: "#fff",
 				pointHighlightFill: "#fff",
 				pointHighlightStroke: "rgba(255,255,0,1)",
-				data: [28, 48, 40, 19, 86, 27, 90]
+				data: []
 			},
 			{
-				label: "My Third dataset",
+				label: "Class III",
 				fillColor: "rgba(0,255,0,0.2)",
 				strokeColor: "rgba(0,255,0,0.2)",
 				pointColor: "rgba(0,255,0,0.2)",
 				pointStrokeColor: "#fff",
 				pointHighlightFill: "#fff",
 				pointHighlightStroke: "rgba(0,255,0,1)",
-				data: [48, 12, 19, 80, 37, 24, 64]
+				data: []
 			}
 		]
-	}, {
+	};
+	
+	var currentDate = getDate();
+	currentDate.setDay(1);
+	for (var i = 0; i < 12; i++) {
+		var previousDate = new Date(currentDate.getYear(), currentDate.getMonth() - 1, 1);
+		console.log(previousDate);
+		currentDate = previousDate;
+	}
+	
+	var ctx = document.getElementById("myChart").getContext("2d");
+	var myNewChart = new Chart(ctx).Line(fdaData, {
 		responsive: true
 	});
 });
