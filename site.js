@@ -191,9 +191,6 @@ $(document).ready(function (){
 	$(window).on('resize', function(){
 		$('#usmap').replaceWith('<div id="usmap"></div>');
 		generateUSMap();
-		
-		var ctx = document.getElementById("myChart").getContext("2d");
-		ctx.canvas.width = $('#myChart').parent().width();
 	});
 	
 	$('#searchButton').click(function() {		
@@ -366,6 +363,8 @@ $(document).ready(function (){
 				data: [28, 48, 40, 19, 86, 27, 90]
 			}
 		]
+	}, {
+		responsive: true
 	});
 });
 
