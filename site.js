@@ -230,13 +230,13 @@ $(document).ready(function (){
 
 					});
 				} else {
-					$("#table_body").append($('<tr>').append('.html("Your query yielded no results."));
+					$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
 				}
 			},
 			'json'
 		).fail(function() {
 			$("#table_body").empty();
-			$("#table_body").append($('<tr colspan="8">').html("Your query yielded no results."));
+			$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
 		});
 	});
 	
@@ -278,13 +278,13 @@ $(document).ready(function (){
 
 						});
 					} else {
-						$("#table_body").append($('<tr colspan="8">').html("Your query yielded no results."));
+						$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
 					}
 				},
 				'json'
 			).fail(function() {
 				$("#table_body").empty();
-				$("#table_body").append($('<tr colspan="8">').html("Your query yielded no results."));
+				$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
 			});
 		}
 	});
