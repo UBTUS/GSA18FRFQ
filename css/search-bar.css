@@ -57,10 +57,12 @@ a,a:visited {
 	height: 500px;
 	border: 1px solid black;
 	overflow: scroll;
+	width: 470px;
 }
 
 .infographicsWelcome {
 	float: right;
+	width: calc(100% - 475px;);
 }
 
 
