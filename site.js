@@ -385,7 +385,8 @@ $(document).ready(function (){
 		var previousDateString = previousDate.getFullYear() + "-" + previousDate.getMonth() + "-" + 1;
 		$.get('https://api.fda.gov/food/enforcement.json?search=recall_initiation_date:[' + previousDateString + '+TO+' + currentDateString + ']&count=classification', function(data) {
 			fdaData.labels.push(months[previousDate.getMonth()] + '-' + previousDate.getFullYear);
-			for each (var item in data.results) {
+			for (var index = 0; index < data.results.length; index++) {
+				var item = data.results[index];
 				if (item.term === 'i') {
 					fdaData.datasets[0].data.push(item.count);
 				}
