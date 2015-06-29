@@ -211,7 +211,7 @@ $(document).ready(function (){
 		searchUrl += "&limit=10";
 		
 		$('#shareDiv').show();
-		$('#searchURL').html('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=' + encodeURIComponent(searchUrl));
+		$('#searchURL').html(encodeURIComponent('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=') + encodeURIComponent(searchUrl));
 
 		$.get(searchUrl,
 			function (data) {

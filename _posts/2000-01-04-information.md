@@ -8,9 +8,9 @@ fa-icon: table
 
 #Recall Notices
 
-<div id="shareDiv" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px; width: 100%; display: none;">
+<div id="shareDiv" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px; width: 100%; display: none; margin-bottom: 10px;">
 	<h3>Share this Search:</h3>
-	<p id="searchURL"></p>
+	<input type="textbox" style="width: 100%;" id="searchURL"></input>
 </div>
 
 <div class="table-responsive" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px;">
