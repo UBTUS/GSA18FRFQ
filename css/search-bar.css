@@ -32,8 +32,8 @@ a,a:visited {
 }
 
 .table-responsive table {
+	width: 100%;
 	border-collapse: collapse;
-	border-radius: 10px;
 }
 
 .table-responsive table tr:nth-of-type(odd) { 
@@ -41,8 +41,8 @@ a,a:visited {
 }
 
 .table-responsive table th { 
-  background: #BF28F9; 
-  color: #000000; 
+  background: #333; 
+  color: white; 
   font-weight: bold; 
 }
 
