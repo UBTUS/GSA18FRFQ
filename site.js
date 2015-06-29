@@ -191,6 +191,9 @@ $(document).ready(function (){
 	$(window).on('resize', function(){
 		$('#usmap').replaceWith('<div id="usmap"></div>');
 		generateUSMap();
+		
+		var ctx = document.getElementById("myChart").getContext("2d");
+		ctx.canvas.width = $('#myChart').parent().width();
 	});
 	
 	$('#searchButton').click(function() {		
