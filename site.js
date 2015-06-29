@@ -59,6 +59,7 @@ var statePairs = [
     { name: 'WISCONSIN', abbreviation: 'WI'},
     { name: 'WYOMING', abbreviation: 'WY' }
 ];
+var locationCriteria = '"Nationwide"';
 
 $.extend($.easing,
 {
@@ -157,7 +158,7 @@ function generateUSMap() {
 			var fullStateName = $.grep(statePairs, function(e) {
 				return e.abbreviation === data.name; 
 			})[0].name;
-			locationCriteria =  '"' + data.name + '"and"' + fullStateName + '"and"Nationwide"' ;
+			locationCriteria =  '"' + data.name + '"+distribution_pattern:"' + fullStateName + '"+distribution_pattern:"Nationwide"' ;
 			$('#searchAreaDisplay').html('Searching ' + fullStateName);
 		}
 	});
@@ -166,8 +167,6 @@ function generateUSMap() {
 $(document).ready(function (){
 
     $('nav li a').navScroller();
-	
-	var locationCriteria = '"Nationwide"';
 
     //section divider icon click gently scrolls to reveal the section
 	$(".sectiondivider").on('click', function(event) {
