@@ -60,8 +60,6 @@ var statePairs = [
     { name: 'WYOMING', abbreviation: 'WY' }
 ];
 
-var locationCriteria = '"Nationwide"';
-
 $.extend($.easing,
 {
     def: 'easeOutQuad',
@@ -158,40 +156,11 @@ function generateUSMap() {
 	});
 }
 
-function performSearch() {
-	$('html, body').animate({
-		scrollTop: $("#themeTable").offset().top - 150
-	}, 500);
-
-	$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status:"Ongoing"+AND+distribution_pattern:' + locationCriteria + '+AND+product_description:"' + $('#searchTextbox').val() + '"' + "&limit=10",
-		function (data) {
-			$("#table_body").empty();
-			if (data.results.length > 0) {
-				$.each(data.results, function (index, datab) {
-					$("#table_body")
-						.append($('<tr>')
-						.append($('<td>').html(datab.product_description))
-						.append($('<td>').html(datab.reason_for_recall))
-						.append($('<td>').html(datab.recall_initiation_date))
-						.append($('<td>').html(datab.recall_number))
-						.append($('<td>').html(datab.recalling_firm))
-						.append($('<td>').html(datab.classification))
-						.append($('<td>').html(datab.code_info))
-						.append($('<td>').html(datab.distribution_pattern))
-						);
-
-				});
-			} else {
-				$("#table_body").append($('<tr colspan="8">').html("Your query yielded no results."));
-			}
-		},
-		'json'
-	);
-}
-
 $(document).ready(function (){
 
     $('nav li a').navScroller();
+	
+	var locationCriteria = '"Nationwide"';
 
     //section divider icon click gently scrolls to reveal the section
 	$(".sectiondivider").on('click', function(event) {
@@ -218,12 +187,66 @@ $(document).ready(function (){
 	});
 	
 	$('#searchButton').click(function() {		
-		performSearch();
+		$('html, body').animate({
+			scrollTop: $("#themeTable").offset().top - 150
+		}, 500);
+
+		$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status:"Ongoing"+AND+distribution_pattern:' + locationCriteria + '+AND+product_description:"' + $('#searchTextbox').val() + '"' + "&limit=10",
+			function (data) {
+				$("#table_body").empty();
+				if (data.results.length > 0) {
+					$.each(data.results, function (index, datab) {
+						$("#table_body")
+							.append($('<tr>')
+							.append($('<td>').html(datab.product_description))
+							.append($('<td>').html(datab.reason_for_recall))
+							.append($('<td>').html(datab.recall_initiation_date))
+							.append($('<td>').html(datab.recall_number))
+							.append($('<td>').html(datab.recalling_firm))
+							.append($('<td>').html(datab.classification))
+							.append($('<td>').html(datab.code_info))
+							.append($('<td>').html(datab.distribution_pattern))
+							);
+
+					});
+				} else {
+					$("#table_body").append($('<tr colspan="8">').html("Your query yielded no results."));
+				}
+			},
+			'json'
+		);
 	});
 	
 	$('#searchTextbox').keyup(function(e) {
 		if (e.keyCode == 13) {
-			performSearch();
+			$('html, body').animate({
+				scrollTop: $("#themeTable").offset().top - 150
+			}, 500);
+
+			$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status:"Ongoing"+AND+distribution_pattern:' + locationCriteria + '+AND+product_description:"' + $('#searchTextbox').val() + '"' + "&limit=10",
+				function (data) {
+					$("#table_body").empty();
+					if (data.results.length > 0) {
+						$.each(data.results, function (index, datab) {
+							$("#table_body")
+								.append($('<tr>')
+								.append($('<td>').html(datab.product_description))
+								.append($('<td>').html(datab.reason_for_recall))
+								.append($('<td>').html(datab.recall_initiation_date))
+								.append($('<td>').html(datab.recall_number))
+								.append($('<td>').html(datab.recalling_firm))
+								.append($('<td>').html(datab.classification))
+								.append($('<td>').html(datab.code_info))
+								.append($('<td>').html(datab.distribution_pattern))
+								);
+
+						});
+					} else {
+						$("#table_body").append($('<tr colspan="8">').html("Your query yielded no results."));
+					}
+				},
+				'json'
+			);
 		}
 	});
 });
