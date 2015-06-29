@@ -146,7 +146,7 @@ function generateUSMap() {
 	$usmap.usmap({
 		'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
 		'stateHoverStyles': { fill: '#7BEC00' },
-		showLabels: true,
+		'showLabels': true,
 		'mouseoverState': {
 			'HI': function (event, data) {
 				//return false;
