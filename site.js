@@ -211,7 +211,7 @@ $(document).ready(function (){
 		searchUrl += "&limit=10";
 		
 		$('#shareDiv').show();
-		$('#searchURL').val('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=' + encodeURIComponent(searchUrl));
+		$('#searchURL').val('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=' + encodeURIComponent(searchUrl) + "/#information");
 
 		$.get(searchUrl,
 			function (data) {
@@ -261,7 +261,7 @@ $(document).ready(function (){
 			searchUrl += "&limit=10";
 			
 			$('#shareDiv').show();
-			$('#searchURL').val('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=' + encodeURIComponent(searchUrl));
+			$('#searchURL').val('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=' + encodeURIComponent(searchUrl) + "/#information");
 
 			$.get(searchUrl,
 				function (data) {
@@ -297,5 +297,45 @@ $(document).ready(function (){
 		FeedUrl: 'http://www.fda.gov/AboutFDA/ContactFDA/StayInformed/RSSFeeds/Recalls/rss.xml',
 		TitleLinkTarget: '_blank'
 	});
+	
+	var sharedLink = parameterGet('search');
+	if (sharedLink) {
+		$('html, body').animate({
+			scrollTop: $("#themeTable").offset().top - 150
+		}, 500);
+		
+		searchUrl = sharedLink;
+		
+		$('#shareDiv').show();
+		$('#searchURL').val('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=' + encodeURIComponent(searchUrl) + "/#information");
+
+		$.get(searchUrl,
+			function (data) {
+				$("#table_body").empty();
+				if (data.results.length > 0) {
+					$.each(data.results, function (index, datab) {
+						$("#table_body")
+							.append($('<tr>')
+							.append($('<td>').html(datab.product_description))
+							.append($('<td>').html(datab.reason_for_recall))
+							.append($('<td>').html(datab.recall_initiation_date))
+							.append($('<td>').html(datab.recall_number))
+							.append($('<td>').html(datab.recalling_firm))
+							.append($('<td>').html(datab.classification))
+							.append($('<td>').html(datab.code_info))
+							.append($('<td>').html(datab.distribution_pattern))
+							);
+
+					});
+				} else {
+					$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
+				}
+			},
+			'json'
+		).fail(function() {
+			$("#table_body").empty();
+			$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
+		});
+	}
 });
 
