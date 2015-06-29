@@ -342,7 +342,7 @@ $(document).ready(function (){
 	//https://api.fda.gov/food/enforcement.json?search=recall_initiation_date:[2014-03-31+TO+2015-03-31]&count=classification
 	
 	var fdaData = {
-		labels: ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+		labels: [],
 		datasets: [
 			{
 				label: "Class I",
@@ -401,6 +401,12 @@ $(document).ready(function (){
 			}
 			currentDate = previousDate;
 			if (currentCount == 0) {
+				
+				fdaData.labels.reverse();
+				fdaData.datasets[0].data.reverse();
+				fdaData.datasets[1].data.reverse();
+				fdaData.datasets[2].data.reverse();
+				
 				var ctx = document.getElementById("myChart").getContext("2d");
 				var myNewChart = new Chart(ctx).Line(fdaData, {
 					responsive: true
@@ -409,7 +415,6 @@ $(document).ready(function (){
 				recursiveFillGraph(currentCount - 1);
 			}
 		}, 'json');
-		
 	}
 	
 	recursiveFillGraph(12);
