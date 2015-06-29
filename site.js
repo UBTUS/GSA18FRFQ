@@ -339,7 +339,7 @@ $(document).ready(function (){
 	}
 	
 	var ctx = document.getElementById("myChart").getContext("2d");
-	var myNewChart = new Chart(ctx).PolarArea({
+	var myNewChart = new Chart(ctx).Line({
 		labels: ["January", "February", "March", "April", "May", "June", "July"],
 		datasets: [
 			{
