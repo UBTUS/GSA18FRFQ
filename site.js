@@ -197,8 +197,21 @@ $(document).ready(function (){
 		$('html, body').animate({
 			scrollTop: $("#themeTable").offset().top - 150
 		}, 500);
+		
+		var searchUrl = 'https://api.fda.gov/food/enforcement.json?search=status:"Ongoing"+AND+distribution_pattern:' + locationCriteria + '+AND+';
+		if ($('#radioDesc').is(':checked')) {
+			searchUrl += "product_description:";
+		} else if ($('#radioManu').is(':checked')) {
+			searchUrl += "product_description.recalling_firm:";
+		} else if ($('#radioBatc').is(':checked')) {
+			searchUrl += "code_info.product_description:";
+		} else {
+			searchUrl += ":";
+		}
+		searchUrl += $('#searchTextbox').val() + '"' + "&limit=10";
+		
 
-		$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status:"Ongoing"+AND+distribution_pattern:' + locationCriteria + '+AND+product_description:"' + $('#searchTextbox').val() + '"' + "&limit=10",
+		$.get(searchUrl,
 			function (data) {
 				$("#table_body").empty();
 				if (data.results.length > 0) {
@@ -229,8 +242,21 @@ $(document).ready(function (){
 			$('html, body').animate({
 				scrollTop: $("#themeTable").offset().top - 150
 			}, 500);
+			
+			var searchUrl = 'https://api.fda.gov/food/enforcement.json?search=status:"Ongoing"+AND+distribution_pattern:' + locationCriteria + '+AND+';
+			if ($('#radioDesc').is(':checked')) {
+				searchUrl += "product_description:";
+			} else if ($('#radioManu').is(':checked')) {
+				searchUrl += "product_description.recalling_firm:";
+			} else if ($('#radioBatc').is(':checked')) {
+				searchUrl += "code_info.product_description:";
+			} else {
+				searchUrl += ":";
+			}
+			searchUrl += $('#searchTextbox').val() + '"' + "&limit=10";
+			
 
-			$.get("https://api.fda.gov/food/enforcement.json?search=" + 'status:"Ongoing"+AND+distribution_pattern:' + locationCriteria + '+AND+product_description:"' + $('#searchTextbox').val() + '"' + "&limit=10",
+			$.get(searchUrl,
 				function (data) {
 					$("#table_body").empty();
 					if (data.results.length > 0) {
