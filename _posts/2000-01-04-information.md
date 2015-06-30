@@ -30,7 +30,7 @@ fa-icon: table
 	</table>
 </div>
 
-<div id="shareDiv" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px; width: 100%; display: none; margin-bottom: 10px;">
-	<h3>Share Results:</h3>
+<div id="shareDiv" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px; width: 100%; display: none; margin-top: 10px;">
+	<h3 style="float: left;">Share Results:</h3>
 	<input type="textbox" style="width: 100%;" id="searchURL"></input>
 </div>

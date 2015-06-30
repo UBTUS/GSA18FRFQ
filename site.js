@@ -347,6 +347,11 @@ $(document).ready(function (){
 		}, 'json');
 	}
 	
+	$('.faq-question').click(function() {
+		$('.faq-answer').hide();
+		$(this).siblings('.faq-answer').show();
+	});
+	
 	recursiveFillGraph(12);
 });
 
