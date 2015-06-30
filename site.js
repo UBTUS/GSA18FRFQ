@@ -218,9 +218,12 @@ $(document).ready(function (){
 			searchUrl += ")&limit=10";
 		}
 		
+		var shareUrl = 'http://www.usfoodrecall.com?search=' + encodeURIComponent(searchUrl) + "/#information";
+		
+		$('#shareTwitter').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(shareUrl) + '&text=Recall%20Information&via=UBTUS');
 		$('#shareDiv').show();
-		$('#searchURL').val('http://www.usfoodrecall.com?search=' + encodeURIComponent(searchUrl) + "/#information");
-
+		$('#searchURL').val(shareUrl);
+//
 		$.get(searchUrl,
 			function (data) {
 				$("#table_body").empty();

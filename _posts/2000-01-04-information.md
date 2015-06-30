@@ -32,5 +32,7 @@ fa-icon: table
 
 <div id="shareDiv" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px; width: 100%; display: none; margin-top: 10px;">
 	<h3 style="float: left;">Share Results:</h3>
+	<a id="shareTwitter" href="/" target="_blank" alt="Share on Twitter!">Twitter</a>
+	
 	<input type="textbox" style="width: 100%;" id="searchURL"></input>
 </div>
