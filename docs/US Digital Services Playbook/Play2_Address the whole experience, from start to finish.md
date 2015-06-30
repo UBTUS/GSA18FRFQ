@@ -19,15 +19,19 @@ search criteria by persisting them we can develop metrics for analysis and enhan
 
 #### key questions
 - What are the different ways (both online and offline) that people currently accomplish the task the digital service is designed to help with?
+
 *A*. Currently most people depend on FDA news feed and media for recall alerts. 
 
 - Where are user pain points in the current way people accomplish the task?
+
 *A*. No user friendly platform to quickly know about recall food products information.
 
 - Where does this specific project fit into the larger way people currently obtain the service being offered?
+
 *A*. This application is useful to all public , accessible through web and on mobile devices.
 
 - What metrics will best indicate how well the service is working for its users?
+
 *A*.  Search metrics(how many times search is being used) is best indicator to know how well service is being used.We are creating link
 for every search,we can save searched link and prepare metrics.
 
