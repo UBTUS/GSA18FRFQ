@@ -35,7 +35,7 @@ Our services should be deployed on flexible infrastructure, where resources can 
 #### key questions
 -Where is your service hosted?
 
-*A*. Amazon Elastic Compute Cloud
+*A*. [Amazon Elastic Compute Cloud] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Misc)
 
 -What hardware does your service use to run?
 
@@ -43,11 +43,11 @@ Our services should be deployed on flexible infrastructure, where resources can 
 
 * Model	: t2.micro
 
-*vCPU	:1
+* vCPU	:1
 
-*CPU Credits / hour : 6
+* CPU Credits / hour : 6
 
-*Mem (GiB)	 : 1
+* Mem (GiB)	 : 1
 
 -What is the demand or usage pattern for your service?
 
