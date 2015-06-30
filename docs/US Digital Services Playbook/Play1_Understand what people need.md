@@ -24,7 +24,7 @@ and prepared user needs. Product manager prepared backlog items from users wish 
 
 - [ ] Create a prioritized list of tasks the user is trying to accomplish, also known as "user stories"
 * User stories are developed based on user needs then prioritized and planned for execution. [Product Backlog] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Artifacts/Product%20Backlog)
-[Sprint Backlog] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Artifacts/Sprint%20Backlog)
+and [Sprint Backlog] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Artifacts/Sprint%20Backlog)
 
 - [ ] As the digital service is being built, regularly test it with potential users to ensure it meets people’s needs
 * Meeting people needs is our first priority in service development. Involved end users to regulary test product as we evolve with new features.
