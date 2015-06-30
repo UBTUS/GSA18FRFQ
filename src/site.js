@@ -231,18 +231,16 @@ $(document).ready(function (){
 				$("#table_body").empty();
 				if (data.results.length > 0) {
 					$.each(data.results, function (index, datab) {
-						$("#table_body")
-							.append($('<tr class="' + datab.classification == 'Class I' ? 'tr-red' : datab.classification == 'Class II' ? 'tr-orange' : 'tr-yellow' + '">')
-							.append($('<td>').html(datab.product_description))
-							.append($('<td>').html(datab.reason_for_recall))
-							.append($('<td>').html(datab.recall_initiation_date))
-							.append($('<td>').html(datab.recall_number))
-							.append($('<td>').html(datab.recalling_firm))
-							.append($('<td>').html(datab.classification))
-							.append($('<td>').html(datab.code_info))
-							.append($('<td>').html(datab.distribution_pattern))
-							);
-
+						var newRow = '<tr class="' + datab.classification == 'Class I' ? 'tr-red' : datab.classification == 'Class II' ? 'tr-orange' : 'tr-yellow' + '">';
+						newRow += '<td>' + datab.product_description + '</td>';
+						newRow += '<td>' + datab.reason_for_recall + '</td>';
+						newRow += '<td>' + datab.recall_initiation_date + '</td>';
+						newRow += '<td>' + datab.recall_number + '</td>';
+						newRow += '<td>' + datab.recalling_firm + '</td>';
+						newRow += '<td>' + datab.classification + '</td>';
+						newRow += '<td>' + datab.code_info + '</td>';
+						newRow += '<td>' + datab.distribution_pattern + '</td>';
+						$("#table_body").append(newRow);
 					});
 				} else {
 					$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
