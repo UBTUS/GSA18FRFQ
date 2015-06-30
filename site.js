@@ -220,7 +220,7 @@ $(document).ready(function (){
 		
 		var shareUrl = 'http://www.usfoodrecall.com?search=' + encodeURIComponent(searchUrl) + "/#information";
 		
-		$('#shareTwitter').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(shareUrl) + '&text=Recall%20Information&via=UBTUS');
+		$('#shareTwitter').data('url', encodeURIComponent(shareUrl));
 		$('#shareDiv').show();
 		$('#searchURL').val(shareUrl);
 //
