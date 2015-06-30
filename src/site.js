@@ -232,14 +232,14 @@ $(document).ready(function (){
 				if (data.results.length > 0) {
 					$.each(data.results, function (index, datab) {
 						var newRow = '<tr class="' + (datab.classification == 'Class I' ? 'tr-red' : datab.classification == 'Class II' ? 'tr-orange' : 'tr-yellow') + '">';
-						newRow += '<td>' + datab.product_description + '</td>';
-						newRow += '<td>' + datab.reason_for_recall + '</td>';
-						newRow += '<td>' + datab.recall_initiation_date + '</td>';
-						newRow += '<td>' + datab.recall_number + '</td>';
-						newRow += '<td>' + datab.recalling_firm + '</td>';
-						newRow += '<td>' + datab.classification + '</td>';
-						newRow += '<td>' + datab.code_info + '</td>';
-						newRow += '<td>' + datab.distribution_pattern + '</td>';
+						newRow += '<td><div>' + datab.product_description + '</div></td>';
+						newRow += '<td><div>' + datab.reason_for_recall + '</div></td>';
+						newRow += '<td><div>' + datab.recall_initiation_date + '</div></td>';
+						newRow += '<td><div>' + datab.recall_number + '</div></td>';
+						newRow += '<td><div>' + datab.recalling_firm + '</div></td>';
+						newRow += '<td><div>' + datab.classification + '</div></td>';
+						newRow += '<td><div>' + datab.code_info + '</div></td>';
+						newRow += '<td><div>' + datab.distribution_pattern + '</div></td>';
 						newRow += '</tr>';
 						$("#table_body").append(newRow);
 					});
