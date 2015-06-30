@@ -1,4 +1,4 @@
-##### Application URL :: [usfoodrecall.com] (www.usfoodrecall.com)
+##### Application URL :: [usfoodrecall.com] http://www.usfoodrecall.com
 
 We developed user friendly , mobile device compatible web application for general public using FDA food recalls and enforcement data.
 This applications helps people to find FDA recalled food products in their state , also nataionwide recalled food products.
