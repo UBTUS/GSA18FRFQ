@@ -54,10 +54,14 @@ a,a:visited {
 
 .rssFeedContainer {
 	float: right;
+	width: 470px;
+}
+
+.rssFeedScroll {
 	height: 500px;
+	width: 100%;
 	border: 1px solid black;
 	overflow: scroll;
-	width: 470px;
 }
 
 .faq {
