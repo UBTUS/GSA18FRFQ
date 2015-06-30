@@ -147,11 +147,12 @@ function generateUSMap() {
 		'stateStyles': { fill: '#5AAC00', 'stroke': 'black', 'stroke-width': 2 },
 		'stateHoverStyles': { fill: '#7BEC00' },
 		'showLabels': true,
-		'mouseoverState': {
+		/*'mouseoverState': {
 			'HI': function (event, data) {
 				//return false;
 			}
-		},
+		},*/
+		//Mouseover logic, might be useful?
 
 		'click': function (event, data) {
 			$('html, body').animate({
@@ -194,118 +195,28 @@ $(document).ready(function (){
 		generateUSMap();
 	});
 	
-	$('#searchButton').click(function() {		
+	function doSearch(myUrl) {
 		$('html, body').animate({
 			scrollTop: $("#themeTable").offset().top - 150
 		}, 500);
 		
-		searchUrl = 'https://api.fda.gov/food/enforcement.json?search=status:"Ongoing"+distribution_pattern:' + locationCriteria + '+AND+';
-		if ($('#radioDesc').is(':checked')) {
-			searchUrl += "product_description:" + '"' + $('#searchTextbox').val() + '"';
-		} else if ($('#radioManu').is(':checked')) {
-			searchUrl += "recalling_firm:" + '"' + $('#searchTextbox').val() + '"+' + '"' + $('#searchTextbox').val() + '"';
-		} else if ($('#radioBatc').is(':checked')) {
-			searchUrl += "code_info:" + '"' + $('#searchTextbox').val() + '"+' + '"' + $('#searchTextbox').val() + '"';
+		var searchValue = $('#searchTextbox').val();
+		
+		if (myUrl) {
+			searchUrl = myUrl;
 		} else {
-			searchUrl += '"' + $('#searchTextbox').val() + '"';
-		}
-		searchUrl += "&limit=10";
-		
-		$('#shareDiv').show();
-		$('#searchURL').val('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=' + encodeURIComponent(searchUrl) + "/#information");
-
-		$.get(searchUrl,
-			function (data) {
-				$("#table_body").empty();
-				if (data.results.length > 0) {
-					$.each(data.results, function (index, datab) {
-						$("#table_body")
-							.append($('<tr>')
-							.append($('<td>').html(datab.product_description))
-							.append($('<td>').html(datab.reason_for_recall))
-							.append($('<td>').html(datab.recall_initiation_date))
-							.append($('<td>').html(datab.recall_number))
-							.append($('<td>').html(datab.recalling_firm))
-							.append($('<td>').html(datab.classification))
-							.append($('<td>').html(datab.code_info))
-							.append($('<td>').html(datab.distribution_pattern))
-							);
-
-					});
-				} else {
-					$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
-				}
-			},
-			'json'
-		).fail(function() {
-			$("#table_body").empty();
-			$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
-		});
-	});
-	
-	$('#searchTextbox').keyup(function(e) {
-		if (e.keyCode == 13) {
-			$('html, body').animate({
-				scrollTop: $("#themeTable").offset().top - 150
-			}, 500);
-			
-			searchUrl = 'https://api.fda.gov/food/enforcement.json?search=status:"Ongoing"+distribution_pattern:' + locationCriteria + '+AND+';
+			searchUrl = 'https://api.fda.gov/food/enforcement.json?search=status:"Ongoing"+AND+(distribution_pattern:' + locationCriteria + ')+AND+(';
 			if ($('#radioDesc').is(':checked')) {
-				searchUrl += "product_description:" + '"' + $('#searchTextbox').val() + '"';
+				searchUrl += "product_description:" + '"' + searchValue + '"';
 			} else if ($('#radioManu').is(':checked')) {
-				searchUrl += "product_description:" + '"' + $('#searchTextbox').val() + '"+' + "recalling_firm:" + '"' + $('#searchTextbox').val() + '"';
+				searchUrl += "product_description:" + '"' + searchValue + '"+' + "recalling_firm:" + '"' + searchValue + '"';
 			} else if ($('#radioBatc').is(':checked')) {
-				searchUrl += "code_info:" + '"' + $('#searchTextbox').val() + '"+' + "product_description:" + '"' + $('#searchTextbox').val() + '"';
+				searchUrl += "code_info:" + '"' + searchValue + '"+' + "product_description:" + '"' + searchValue + '"';
 			} else {
-				searchUrl += '"' + $('#searchTextbox').val() + '"';
+				searchUrl += '"' + searchValue + '"';
 			}
-			searchUrl += "&limit=10";
-			
-			$('#shareDiv').show();
-			$('#searchURL').val('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=' + encodeURIComponent(searchUrl) + "/#information");
-
-			$.get(searchUrl,
-				function (data) {
-					$("#table_body").empty();
-					if (data.results.length > 0) {
-						$.each(data.results, function (index, datab) {
-							$("#table_body")
-								.append($('<tr>')
-								.append($('<td>').html(datab.product_description))
-								.append($('<td>').html(datab.reason_for_recall))
-								.append($('<td>').html(datab.recall_initiation_date))
-								.append($('<td>').html(datab.recall_number))
-								.append($('<td>').html(datab.recalling_firm))
-								.append($('<td>').html(datab.classification))
-								.append($('<td>').html(datab.code_info))
-								.append($('<td>').html(datab.distribution_pattern))
-								);
-
-						});
-					} else {
-						$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
-					}
-				},
-				'json'
-			).fail(function() {
-				$("#table_body").empty();
-				$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
-			});
+			searchUrl += ")&limit=10";
 		}
-	});
-	
-	$('#rssFeed').FeedEk({
-		FeedUrl: 'http://www.fda.gov/AboutFDA/ContactFDA/StayInformed/RSSFeeds/Recalls/rss.xml',
-		TitleLinkTarget: '_blank'
-	});
-	
-	var sharedLink = parameterGet('search');
-	if (sharedLink) {
-		$('html, body').animate({
-			scrollTop: $("#themeTable").offset().top - 150
-		}, 500);
-		
-		searchUrl = sharedLink;
 		
 		$('#shareDiv').show();
 		$('#searchURL').val('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=' + encodeURIComponent(searchUrl) + "/#information");
@@ -339,7 +250,25 @@ $(document).ready(function (){
 		});
 	}
 	
-	//https://api.fda.gov/food/enforcement.json?search=recall_initiation_date:[2014-03-31+TO+2015-03-31]&count=classification
+	$('#searchButton').click(function() {		
+		doSearch();
+	});
+	
+	$('#searchTextbox').keyup(function(e) {
+		if (e.keyCode == 13) {
+			doSearch();
+		}
+	});
+	
+	$('#rssFeed').FeedEk({
+		FeedUrl: 'http://www.fda.gov/AboutFDA/ContactFDA/StayInformed/RSSFeeds/Recalls/rss.xml',
+		TitleLinkTarget: '_blank'
+	});
+	
+	var sharedLink = parameterGet('search');
+	if (sharedLink) {
+		doSearch(sharedLink);
+	}
 	
 	var fdaData = {
 		labels: [],
