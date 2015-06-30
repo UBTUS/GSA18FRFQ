@@ -240,6 +240,7 @@ $(document).ready(function (){
 						newRow += '<td>' + datab.classification + '</td>';
 						newRow += '<td>' + datab.code_info + '</td>';
 						newRow += '<td>' + datab.distribution_pattern + '</td>';
+						newRow += '</tr>';
 						$("#table_body").append(newRow);
 					});
 				} else {
