@@ -2,8 +2,8 @@
 
 ###Prerequisites
 
-Jekyll (And Dependencies) - [All Platforms](http://jekyllrb.com/docs/installation/)
-Apache2 Web Server - [Ubuntu 14.04](https://help.ubuntu.com/lts/serverguide/httpd.html)
++ Jekyll (And Dependencies) - [All Platforms](http://jekyllrb.com/docs/installation/)
++ Apache2 Web Server - [Ubuntu 14.04](https://help.ubuntu.com/lts/serverguide/httpd.html)
 
 ###Building
 
