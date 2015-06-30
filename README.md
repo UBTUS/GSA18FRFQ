@@ -1,11 +1,11 @@
-Application URL :: usfoodrecall.com
+##### Application URL :: [usfoodrecall.com] (www.usfoodrecall.com)
 
 We developed user friendly , mobile device compatible web application for general public using FDA food recalls and enforcement data.
 This applications helps people to find FDA recalled food products in their state , also nataionwide recalled food products.
 
 This food recall information helps people to clarify whether any of their recent sickenss is due to consumption of recalled product.
 
-Technical Approach :
+##### Technical Approach :
 
 We successfully implemented this project with Agile development methodology. All basic features for this prototype(Minimum Viable Product)
 is planned and executed in first sprint (5 day). Additional features are added in second sprint(4 day).
