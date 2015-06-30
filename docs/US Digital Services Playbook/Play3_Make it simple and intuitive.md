@@ -33,15 +33,14 @@ to make easily understandable.
 
 *A*. [Application url] (http://usfoodrecall.com/)
 
-     --*Search food recall data based on State and also nationwide.
+     *Search food recall data based on State and also nationwide.
 
-     --*Feature to share searched content on social network.
+     *Feature to share searched content on social network.
 
-     --*Feature to provide feedback about features. 
+     *Feature to provide feedback about features. 
 
-     --*Shown food recall reports in graphical charts.
+     *Shown food recall reports in graphical charts.
       
-
 - Is the language as plain and universal as possible?
 
 *A*. Yes. We involved language experts for content writing and also performed usability test with different background people.
