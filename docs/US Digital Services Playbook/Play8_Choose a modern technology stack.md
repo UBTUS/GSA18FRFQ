@@ -26,10 +26,15 @@ The technology decisions we make need to enable development teams to work effici
 - What is your development stack and why did you choose it?
 
 *A*. Important technology stack is:
+
 *Ubuntu : Open Source secured Linux Operating System
+
 *Apache : Open Source web server.
+
 *GitHub : Version control system and repository.
+
 *Jenkins: Continouus Integration server.
+
 *HTML5/CSS3/JavaScript/BootStrap : Used for frontend development.
 
 - Which databases are you using and why did you choose them?
