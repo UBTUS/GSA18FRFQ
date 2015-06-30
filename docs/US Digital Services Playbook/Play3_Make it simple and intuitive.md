@@ -39,7 +39,7 @@ to make easily understandable.
 
      *Feature to provide feedback about features. 
 
-     *Shown food recall reports in graphical charts.
+     *Show food recall reports in graphical charts.
       
 - Is the language as plain and universal as possible?
 
