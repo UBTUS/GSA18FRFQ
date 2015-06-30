@@ -221,9 +221,11 @@ $(document).ready(function (){
 		var shareUrl = 'http://www.usfoodrecall.com?search=' + encodeURIComponent(searchUrl) + "/#information";
 		
 		$('#shareTwitter').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(shareUrl) + '&text=Recall%20Information%20for%20' + encodeURIComponent($('#searchTextbox').val()) + '&via=UBTUS');
+		$('#shareFacebook').attr('href', 'https://facebook.com/sharer.php?u=' + encodeURIComponent(shareUrl));
+		$('#shareGoogle').attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(shareUrl));
 		$('#shareDiv').show();
 		$('#searchURL').val(shareUrl);
-//
+
 		$.get(searchUrl,
 			function (data) {
 				$("#table_body").empty();
