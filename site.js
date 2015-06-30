@@ -200,7 +200,7 @@ $(document).ready(function (){
 			scrollTop: $("#themeTable").offset().top - 150
 		}, 500);
 		
-		var searchValue = $('#searchTextbox').val();
+		var searchValue = $('#searchTextbox').val().replace(/\s/g, "+");
 		
 		if (myUrl) {
 			searchUrl = myUrl;
