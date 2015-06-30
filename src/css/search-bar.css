@@ -137,6 +137,10 @@ a,a:visited {
 	padding-bottom: 25px;
 }
 
+.myChart {
+	height: 95px;
+}
+
 .legend-text {
 	float: left;
 }
@@ -154,6 +158,10 @@ a,a:visited {
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	.myChart {
+		height: 295px !important;
+	}
 
 	.rssFeedContainer {
 		width: 100% !important;
