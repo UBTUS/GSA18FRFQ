@@ -34,8 +34,13 @@ fa-icon: table
 	<h3 style="float: left;">Share Results:</h3>
 	<h3 style="float: right;">
 		<a style="float: right;" id="shareTwitter" href="/" target="_blank" alt="Share on Twitter!"><i class="fa fa-twitter"></i></a>
+	</h3>
+	<h3 style="float: right;">
 		<a style="float: right;" id="shareFacebook" href="/" target="_blank" alt="Share on Facebook!"><i class="fa fa-facebook"></i></a>
+	</h3>
+	<h3 style="float: right;">
 		<a style="float: right;" id="shareGoogle" href="/" target="_blank" alt="Share on Google+!"><i class="fa fa-google-plus"></i></a>
 	</h3>
+		
 	<input type="textbox" style="width: 100%;" id="searchURL"></input>
 </div>

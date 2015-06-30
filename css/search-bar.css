@@ -88,6 +88,16 @@ a,a:visited {
 	float: right;
 }
 
+#shareDiv h3 a {
+	border: 1px solid transparent;
+}
+
+#shareDiv h3 a:hover {
+	color: white;
+	border: 1px solid white;
+	background-color: black;
+}
+
 .faq-answer {
 	display: none;
 	padding-left: 25px;
