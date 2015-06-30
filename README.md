@@ -17,7 +17,7 @@ Six member cross-functional agile team was formed consists of Product Manager , 
 Content Designer , Front End Web Designer , Dev Ops Engineer and Usability Tester. Product Manager is made 
 accountable for prototype backlog definition and quality delivery.
 
-We conducted *[sprint planning meeting]* (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Agile%20Meeting%20Notes/1.%20Sprint%20Planning/USFoodRecall_Planning_06182015_Sprint1.md) to understand product owners backlog items (User stories) for prototype. Product owner prioritized
+We conducted [sprint planning meeting] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Agile%20Meeting%20Notes/1.%20Sprint%20Planning/USFoodRecall_Planning_06182015_Sprint1.md) to understand product owners backlog items (User stories) for prototype. Product owner prioritized
 and defined acceptance criteria for user stories then Agile team played planning poker and provided points for each user story selected for first sprint. 
 Team throughly discussed and provided estimated story points withh all team members acceptance. Some of user stories are pushed back to product backlog 
 with product owners approval as estimated story points exceeds team velocity.
