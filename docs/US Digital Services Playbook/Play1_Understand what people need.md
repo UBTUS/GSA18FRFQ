@@ -30,18 +30,33 @@ We must begin digital projects by exploring and pinpointing the needs of the peo
 
 #### key questions
 1. Who are your primary users?
+
 *A*.
+
 2. What user needs will this service address?
+
 *A*.
+
 3. Why does the user want or need this service?
+
 *A*.
+
 4. Which people will have the most difficulty with the service?
+
 *A*.
+
 5. Which research methods were used?
+
 *A*.
+
 6. What were the key findings?
+
 *A*.
+
 7. How were the findings documented? Where can future team members access the documentation?
+
 *A*.
+
 8. How often are you testing with real people?
+
 *A*.
