@@ -37,11 +37,13 @@ a,a:visited {
 }
 
 .table-responsive table tr { 
-    max-height: 100px;
+    height: 100px;
+	overflow: hidden;
 }
 
-.table-responsive table tr:hover {
-	max-height: 1000px;
+.table-responsive table tr:hover { 
+    height: auto;
+	overflow: hidden;
 }
 
 .tr-red {
@@ -178,7 +180,10 @@ only screen and (max-width: 760px),
 		left: -9999px;
 	}
 	
-	.table-responsive table tr { border: 1px solid #ccc; }
+	.table-responsive table tr { 
+		border: 1px solid #ccc;
+		height: auto;
+	}
 	
 	.table-responsive table td { 
 		/* Behave  like a "row" */
