@@ -1,9 +1,16 @@
-key questions
-Who are your primary users?
-What user needs will this service address?
-Why does the user want or need this service?
-Which people will have the most difficulty with the service?
-Which research methods were used?
-What were the key findings?
-How were the findings documented? Where can future team members access the documentation?
-How often are you testing with real people?
+## Play 7
+### Bring in experienced teams
+
+
+
+We need talented people working in government who have experience creating modern digital services. This includes bringing in seasoned product managers, engineers, and designers. When outside help is needed, our teams should work with contracting officers who understand how to evaluate third-party technical competency so our teams can be paired with contractors who are good at both building and delivering effective digital services. The makeup and experience requirements of the team will vary depending on the scope of the project.
+
+#### checklist
+- [ ] Member(s) of the team have experience building popular, high-traffic digital services
+- [ ] Member(s) of the team have experience designing mobile and web applications
+- [ ] Member(s) of the team have experience using automated testing frameworks
+- [ ] Member(s) of the team have experience with modern development and operations (DevOps) techniques like continuous integration and continuous deployment
+- [ ] Member(s) of the team have experience securing digital services
+- [ ] A Federal contracting officer is on the internal team if a third party will be used for development work
+- [ ] A Federal budget officer is on the internal team or is a partner
+- [ ] The appropriate privacy, civil liberties, and/or legal advisor for the department or agency is a partner

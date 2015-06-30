@@ -1,9 +1,17 @@
-key questions
-Who are your primary users?
-What user needs will this service address?
-Why does the user want or need this service?
-Which people will have the most difficulty with the service?
-Which research methods were used?
-What were the key findings?
-How were the findings documented? Where can future team members access the documentation?
-How often are you testing with real people?
+## Play 8
+### Choose a modern technology stack
+
+
+
+The technology decisions we make need to enable development teams to work efficiently and enable services to scale easily and cost-effectively. Our choices for hosting infrastructure, databases, software frameworks, programming languages and the rest of the technology stack should seek to avoid vendor lock-in and match what successful modern consumer and enterprise software companies would choose today. In particular, digital services teams should consider using open source, cloud-based, and commodity solutions across the technology stack, because of their widespread adoption and support by successful consumer and enterprise technology companies in the private sector.
+
+#### checklist
+- [ ] Choose software frameworks that are commonly used by private-sector companies creating similar services
+- [ ] Whenever possible, ensure that software can be deployed on a variety of commodity hardware types
+- [ ] Ensure that each project has clear, understandable instructions for setting up a local development environment, and that team members can be quickly added or removed from projects
+- [ ] [Consider open source software solutions](http://www.whitehouse.gov/sites/default/files/omb/assets/egov_docs/memotociostechnologyneutrality.pdf) at every layer of the stack
+
+#### key questions
+- What is your development stack and why did you choose it?
+- Which databases are you using and why did you choose them?
+- How long does it take for a new team member to start developing?
