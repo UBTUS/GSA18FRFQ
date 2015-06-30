@@ -40,6 +40,18 @@ a,a:visited {
   background: #eee; 
 }
 
+.tr-red {
+	background: #ffeeee;
+}
+
+.tr-orange {
+	background: #fff6ee;
+}
+
+.tr-yellow {
+	background: #ffffee;
+}
+
 .table-responsive table th { 
   background: #333; 
   color: white; 

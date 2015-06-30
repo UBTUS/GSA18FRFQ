@@ -232,7 +232,7 @@ $(document).ready(function (){
 				if (data.results.length > 0) {
 					$.each(data.results, function (index, datab) {
 						$("#table_body")
-							.append($('<tr>')
+							.append($('<tr class="' + datab.classification == 'Class I' ? 'tr-red' : datab.classification == 'Class II' ? 'tr-orange' : 'tr-yellow' + '">')
 							.append($('<td>').html(datab.product_description))
 							.append($('<td>').html(datab.reason_for_recall))
 							.append($('<td>').html(datab.recall_initiation_date))
