@@ -219,7 +219,7 @@ $(document).ready(function (){
 		}
 		
 		$('#shareDiv').show();
-		$('#searchURL').val('http://ec2-52-27-70-124.us-west-2.compute.amazonaws.com?search=' + encodeURIComponent(searchUrl) + "/#information");
+		$('#searchURL').val('http://www.usfoodrecall.com?search=' + encodeURIComponent(searchUrl) + "/#information");
 
 		$.get(searchUrl,
 			function (data) {
