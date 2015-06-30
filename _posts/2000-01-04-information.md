@@ -8,23 +8,18 @@ fa-icon: table
 
 #Recall Notices
 
-<div id="shareDiv" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px; width: 100%; display: none; margin-bottom: 10px;">
-	<h3>Share Results:</h3>
-	<input type="textbox" style="width: 100%;" id="searchURL"></input>
-</div>
-
 <div class="table-responsive" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px;">
 	<table id="themeTable" class="table">
 		<thead>
 			<tr>
 				<th>Product</th>
-				<th>Recall reason</th>
-				<th>Recall intiation date</th>
-				<th>Recall number</th>
-				<th>Recalling firm</th>
+				<th>Recall Reason</th>
+				<th>Recall Initiation Date</th>
+				<th>Recall Number</th>
+				<th>Recalling Firm</th>
 				<th>Classification</th>
-				<th>Code info</th>
-				<th>Distribution pattern</th>
+				<th>Code Info</th>
+				<th>Distribution Pattern</th>
 			</tr>
 		</thead>
 		<tbody id="table_body">
@@ -33,4 +28,9 @@ fa-icon: table
 			</tr>
 		</tbody>
 	</table>
+</div>
+
+<div id="shareDiv" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px; width: 100%; display: none; margin-bottom: 10px;">
+	<h3>Share Results:</h3>
+	<input type="textbox" style="width: 100%;" id="searchURL"></input>
 </div>
