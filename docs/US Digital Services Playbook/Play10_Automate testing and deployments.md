@@ -1,9 +1,25 @@
-key questions
-Who are your primary users?
-What user needs will this service address?
-Why does the user want or need this service?
-Which people will have the most difficulty with the service?
-Which research methods were used?
-What were the key findings?
-How were the findings documented? Where can future team members access the documentation?
-How often are you testing with real people?
+## Play 10
+### Automate testing and deployments
+
+
+
+Today, developers write automated scripts that can verify thousands of scenarios in minutes and then deploy updated code into production environments multiple times a day. They use automated performance tests which simulate surges in traffic to identify performance bottlenecks. While manual tests and quality assurance are still necessary, automated tests provide consistent and reliable protection against unintentional regressions, and make it possible for developers to confidently release frequent updates to the service.
+
+#### checklist
+- [ ] Create automated tests that verify all user-facing functionality
+- [ ] Create unit and integration tests to verify modules and components
+- [ ] Run tests automatically as part of the build process
+- [ ] Perform deployments automatically with deployment scripts, continuous delivery services, or similar techniques
+- [ ] Conduct load and performance tests at regular intervals, including before public launch
+
+#### key questions
+- What percentage of the code base is covered by automated tests?
+- How long does it take to build, test, and deploy a typical bug fix?
+- How long does it take to build, test, and deploy a new feature into production?
+- How frequently are builds created?
+- What test tools are used?
+- Which deployment automation or continuous integration tools are used?
+- What is the estimated maximum number of concurrent users who will want to use the system?
+- How many simultaneous users could the system handle, according to the most recent capacity test?
+- How does the service perform when you exceed the expected target usage volume? Does it degrade gracefully or catastrophically?
+- What is your scaling strategy when demand increases suddenly?
