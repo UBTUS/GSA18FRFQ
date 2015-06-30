@@ -123,14 +123,18 @@ a,a:visited {
 	width: 100% !important;
 }
 
+.chartContainer {
+	width: calc(100% - 50px);
+	margin-left: 25px;
+	margin-right: 25px;
+	padding-bottom: 25px;
+}
+
 .infographicsNational {
 	width: 100% !important;
 	clear: both;
 	background-color: white; 
 	border: 1px solid black; 
-	padding-bottom: 25px; 
-	padding-left: 25px; 
-	padding-right: 25px;
 }
 
 .legend-text {
