@@ -39,32 +39,41 @@ We should use an incremental, fast-paced style of software development to reduce
 
 #### key questions
 - How long did it take to ship the MVP? If it hasn't shipped yet, when will it?
+
 *A*. 5 days.
 
 - How long does it take for a production deployment?
+
 *A*. We setup Continuous Integration server setup. So Production deployment is done with few clicks in minutes.
 Build involves code pull , running automated tests , deployment and post production tests.
 
 - How many days or weeks are in each iteration/sprint?
+
 *A*. 5 days sprint.
 
 - Which version control system is being used?
+
 *A*. GitHub
 
 - How are bugs tracked and tickets issued? What tool is used?
+
 *A*. Github issue tracker and Phabricator
 
 - How is the feature backlog managed? What tool is used?
+
 *A*. Phabricator project management tool and used openoffice excel.
 
 - How often do you review and reprioritize the feature and bug backlog?
+
 *A*. Change is welcome anytime from product owner. Usually we do prioritization for each sprint, but
 in case of emergency situations we will adjust features in accordance to user needs in middle of sprint , its very rare situation.
 
 - How do you collect user feedback during development? How is that feedback used to improve the service?
+
 *A*. We collect feedback directly from site. Each feedback is used to add new features and improve prototype usability.
 Technical users can also use github to open issues.
 
 - At each stage of usability testing, which gaps were identified in addressing user needs?
+
 *A*. Usability testing is done at every stage with our dedicated tester. Search content display is modified many times to 
 fit into user needs.
