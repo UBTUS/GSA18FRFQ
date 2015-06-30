@@ -36,8 +36,12 @@ a,a:visited {
 	border-collapse: collapse;
 }
 
-.table-responsive table tr:nth-of-type(odd) { 
-  background: #eee; 
+.table-responsive table tr { 
+    max-height: 100px;
+}
+
+.table-responsive table tr:hover {
+	max-height: 1000px;
 }
 
 .tr-red {

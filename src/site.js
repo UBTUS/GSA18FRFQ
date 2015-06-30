@@ -231,7 +231,6 @@ $(document).ready(function (){
 				$("#table_body").empty();
 				if (data.results.length > 0) {
 					$.each(data.results, function (index, datab) {
-						console.log('<tr class="' + (datab.classification == 'Class I' ? 'tr-red' : datab.classification == 'Class II' ? 'tr-orange' : 'tr-yellow') + '">');
 						var newRow = '<tr class="' + (datab.classification == 'Class I' ? 'tr-red' : datab.classification == 'Class II' ? 'tr-orange' : 'tr-yellow') + '">';
 						newRow += '<td>' + datab.product_description + '</td>';
 						newRow += '<td>' + datab.reason_for_recall + '</td>';
