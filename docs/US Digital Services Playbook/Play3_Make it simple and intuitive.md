@@ -31,15 +31,15 @@ to make easily understandable.
 #### key questions
 - What primary tasks are the user trying to accomplish?
 
-*A*. Search food recall data based on State and also nationwide. 
+*A*. *Search food recall data based on State and also nationwide.
 
-     Feature to share searched content on social network.
+     *Feature to share searched content on social network.
 
-     Feature to provide feedback about features. 
+     *Feature to provide feedback about features. 
 
-     Shown food recall reports in graphical charts.
+     *Shown food recall reports in graphical charts.
   
-     [Application url] (http://usfoodrecall.com/)
+     *[Application url] (http://usfoodrecall.com/)
 
 - Is the language as plain and universal as possible?
 
