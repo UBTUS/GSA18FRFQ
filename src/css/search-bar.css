@@ -36,16 +36,6 @@ a,a:visited {
 	border-collapse: collapse;
 }
 
-.table-responsive table tr td { 
-    height: 100px;
-	overflow: hidden;
-}
-
-.table-responsive table tr td:hover { 
-    height: auto;
-	overflow: hidden;
-}
-
 .tr-red {
 	background: #ffeeee;
 }
@@ -180,13 +170,7 @@ only screen and (max-width: 760px),
 		left: -9999px;
 	}
 	
-	.table-responsive table tr { 
-		border: 1px solid #ccc;
-	}
-	
-	.table-responsive table tr td {
-		height: auto !important;
-	}
+	.table-responsive table tr { border: 1px solid #ccc; }
 	
 	.table-responsive table td { 
 		/* Behave  like a "row" */
