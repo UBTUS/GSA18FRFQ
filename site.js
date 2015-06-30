@@ -257,6 +257,7 @@ $(document).ready(function (){
 	$('#searchTextbox').keyup(function(e) {
 		if (e.keyCode == 13) {
 			doSearch();
+			$('#searchTextbox').blur();
 		}
 	});
 	
