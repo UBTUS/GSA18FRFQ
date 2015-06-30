@@ -60,6 +60,11 @@ a,a:visited {
 	width: 470px;
 }
 
+.faq {
+	border: 1px solid rgba(0, 0, 0, .5);
+	margin-bottom: 5px;
+}
+
 .faqSection {
 	float: left;
 	width: calc(100% - 475px);
@@ -73,8 +78,8 @@ a,a:visited {
 }
 
 .faq-question:hover {
-	border: 1px solid rgba(0, 0, 0, .5);
 	cursor: pointer;
+	background-color: rgba(0, 255, 255, .25);
 }
 
 .faq-question i {
@@ -83,6 +88,9 @@ a,a:visited {
 
 .faq-answer {
 	display: none;
+	text-indent: 5px;
+	background-color: rgba(255, 255, 255, .5);
+	border-radius: 3px;
 }
 
 .feedEkList {
