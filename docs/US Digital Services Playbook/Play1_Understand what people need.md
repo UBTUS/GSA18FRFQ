@@ -7,10 +7,11 @@ We must begin digital projects by exploring and pinpointing the needs of the peo
 
 #### checklist
 - [ ] Early in the project, spend time with current and prospective users of the service
-* Give explanation
+* Users of this application are members of general public. We discussed FDA food recall and enforcement datasets with different background people
+and prepared user needs. Product manager prepared backlog items from users wish list. [Product Backlog] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Artifacts/Product%20Backlog)
 
 - [ ] Use a range of qualitative and quantitative research methods to determine people’s goals, needs, and behaviors; be thoughtful about the time spent
-* Give explanation
+
 
 - [ ] Test prototypes of solutions with real people, in the field if possible
 * Give explanation
