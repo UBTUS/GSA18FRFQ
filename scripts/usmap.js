@@ -366,9 +366,8 @@
         $(this.labelHitAreas[state].node).bind('click', this._onClickProxy);
         $(this.labelHitAreas[state].node).bind('mouseover', this._onMouseOverProxy);
       }
-    },
-    
-	var otherStates = {
+	  
+	  var otherStates = {
 		HI: {x:295, y:560}, 
 		AK: {x:120, y:495},
 		CA: {x:70, y:280},
@@ -435,6 +434,7 @@
 		});
 		this.labelHitAreas[state].node.dataState = state;
 	}
+    },
     
     /**
      * Get the state Raphael object
