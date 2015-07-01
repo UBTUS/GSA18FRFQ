@@ -226,7 +226,3 @@ only screen and (max-width: 760px),
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px
 }
-
-.searchform input, .searchform button {
-	float: left
-}
