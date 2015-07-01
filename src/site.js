@@ -215,7 +215,25 @@ $(document).ready(function (){
 			} else {
 				searchUrl += '"' + searchValue + '"';
 			}
-			searchUrl += ")&limit=10";
+			searchUrl += ')+AND+recall_initiation_date:[';
+			
+			var currentDate = new Date();
+			var previousDate;
+			if ($('#radioMonth').is(':checked')) {
+				previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, currentDate.getDate());
+			} else if ($('#radioTwoMonth').is(':checked')) {
+				previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 2, currentDate.getDate());
+			} else if ($('#radioSixMonth').is(':checked')) {
+				previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 6, currentDate.getDate());
+			} else {
+				previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 12, currentDate.getDate());
+			}
+			var currentDateString = (currentDate.getMonth() == 0 ? currentDate.getFullYear() - 1 : currentDate.getFullYear()) + "-" + (currentDate.getMonth() == 0 ? 12 : currentDate.getMonth()) + "-" + 1;
+			var previousDateString = (previousDate.getMonth() == 0 ? previousDate.getFullYear() - 1 : previousDate.getFullYear()) + "-" + (previousDate.getMonth() == 0 ? 12 : previousDate.getMonth()) + "-" + 1;
+			
+			searchUrl += previousDateString + "+TO+" + currentDateString + "]";
+			
+			searchUrl += "&limit=10";
 		}
 		
 		var shareUrl = 'http://www.usfoodrecall.com?search=' + encodeURIComponent(searchUrl) + "/#information";
