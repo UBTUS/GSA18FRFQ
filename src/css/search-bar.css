@@ -92,6 +92,7 @@ a,a:visited {
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
+		width: 145px;
 		top: 6px;
 		left: 6px;
 		padding-right: 10px; 
@@ -103,7 +104,7 @@ a,a:visited {
 	*/
 	.table-responsive table td:nth-of-type(1):before { content: "Product"; }
 	.table-responsive table td:nth-of-type(2):before { content: "Recall Reason"; }
-	.table-responsive table td:nth-of-type(3):before { content: "Recall Initiation Data"; }
+	.table-responsive table td:nth-of-type(3):before { content: "Recall Initiation Date"; }
 	.table-responsive table td:nth-of-type(4):before { content: "Recall Number"; }
 	.table-responsive table td:nth-of-type(5):before { content: "Recalling Firm"; }
 	.table-responsive table td:nth-of-type(6):before { content: "Classification"; }
