@@ -19,6 +19,7 @@ a,a:visited {
 .table-responsive  > .scrolling {
 	max-height: 300px;
 	overflow-y: scroll;
+	border: 1px solid rgba(0, 0, 0, .5);
 }
 
 #usmap {
