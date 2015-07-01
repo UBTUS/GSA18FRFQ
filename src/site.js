@@ -234,7 +234,7 @@ $(document).ready(function (){
 						var newRow = '<tr class="' + (datab.classification == 'Class I' ? 'tr-red' : datab.classification == 'Class II' ? 'tr-orange' : 'tr-yellow') + '">';
 						newRow += '<td>' + datab.product_description + '</td>';
 						newRow += '<td>' + datab.reason_for_recall + '</td>';
-						newRow += '<td>' + datab.recall_initiation_date + '</td>';
+						newRow += '<td>' + datab.recall_initiation_date.insert(6, "-").insert(4, "-") + '</td>';
 						newRow += '<td>' + datab.recall_number + '</td>';
 						newRow += '<td>' + datab.recalling_firm + '</td>';
 						newRow += '<td>' + datab.classification + '</td>';
@@ -358,4 +358,11 @@ $(document).ready(function (){
 	
 	recursiveFillGraph(12);
 });
+
+String.prototype.insert = function (index, string) {
+  if (index > 0)
+    return this.substring(0, index) + string + this.substring(index, this.length);
+  else
+    return string + this;
+};
 
