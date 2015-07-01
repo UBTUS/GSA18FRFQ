@@ -7,10 +7,33 @@ We need talented people working in government who have experience creating moder
 
 #### checklist
 - [ ] Member(s) of the team have experience building popular, high-traffic digital services
+*Yes.
+
 - [ ] Member(s) of the team have experience designing mobile and web applications
+
+*Yes.
+
 - [ ] Member(s) of the team have experience using automated testing frameworks
+
+*Yes.
+
+
 - [ ] Member(s) of the team have experience with modern development and operations (DevOps) techniques like continuous integration and continuous deployment
+
+*Yes.
+
 - [ ] Member(s) of the team have experience securing digital services
+
+*Yes.
+
 - [ ] A Federal contracting officer is on the internal team if a third party will be used for development work
+
+*Yes.
+
 - [ ] A Federal budget officer is on the internal team or is a partner
+
+*Yes.
+
 - [ ] The appropriate privacy, civil liberties, and/or legal advisor for the department or agency is a partner
+
+*Yes.
