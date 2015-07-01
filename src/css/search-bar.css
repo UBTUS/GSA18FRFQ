@@ -16,9 +16,9 @@ a,a:visited {
   color:#fff
 }
 
-.table-responsive {
+.table-responsive  > .scrolling {
 	max-height: 300px;
-	overflow: hidden;
+	overflow-y: scroll;
 }
 
 #usmap {
