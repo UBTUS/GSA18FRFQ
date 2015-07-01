@@ -32,13 +32,13 @@ fa-icon: table
 
 <div id="shareDiv" style="background-color: rgba(255, 255, 255, .8); border-radius: 10px; padding: 20px; width: 100%; display: none; margin-top: 10px;">
 	<h3 style="float: left;">Share Results:</h3>
-	<h3 style="float: right; margin-left: 5px; margin-right: 5px;">
+	<h3 style="float: right; margin-left: 5px; margin-right: 5px; padding-left: 5px; padding-right: 5px;">
 		<a style="float: right;" id="shareTwitter" href="/" target="_blank" alt="Share on Twitter!"><i class="fa fa-twitter"></i></a>
 	</h3>
-	<h3 style="float: right; margin-left: 5px; margin-right: 5px;">
+	<h3 style="float: right; margin-left: 5px; margin-right: 5px; padding-left: 5px; padding-right: 5px;">
 		<a style="float: right;" id="shareFacebook" href="/" target="_blank" alt="Share on Facebook!"><i class="fa fa-facebook"></i></a>
 	</h3>
-	<h3 style="float: right; margin-left: 5px; margin-right: 5px;">
+	<h3 style="float: right; margin-left: 5px; margin-right: 5px; padding-left: 5px; padding-right: 5px;">
 		<a style="float: right;" id="shareGoogle" href="/" target="_blank" alt="Share on Google+!"><i class="fa fa-google-plus"></i></a>
 	</h3>
 		
