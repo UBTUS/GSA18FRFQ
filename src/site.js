@@ -410,8 +410,8 @@ function Sort(col, dir) {
             var B = $(b).children('td').eq(col).text().toUpperCase();
         }
 
-		console.log(a);
-		console.log(b);
+		console.log(A);
+		console.log(B);
 
         if (A < B) {
             return dir == "dec" ? 1 : -1;
