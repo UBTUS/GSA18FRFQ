@@ -424,7 +424,7 @@ function Sort(col, dir) {
     });
 
     $.each(rows, function (index, row) {
-        $('#myTable').children('tbody').append(row);
+        $('#table_body').append(row);
     });
 }
 
