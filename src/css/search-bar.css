@@ -218,6 +218,7 @@ only screen and (max-width: 760px),
   background:rgba(244,244,244,.79);
   border: 1px solid #d3d3d3;
   padding: 2px 5px;
+  padding-bottom: 40px;
   width: 100%;
   box-shadow:0 4px 9px rgba(0,0,0,.37);
   -moz-box-shadow:0 4px 9px rgba(0,0,0,.37);
