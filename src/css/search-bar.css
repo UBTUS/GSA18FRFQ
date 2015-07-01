@@ -58,6 +58,7 @@ a,a:visited {
   padding: 6px; 
   border: 1px solid #ccc; 
   text-align: left; 
+  word-wrap: break-word;
 }
 
 .rssFeedContainer {
