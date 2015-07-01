@@ -261,6 +261,7 @@ $(document).ready(function (){
 						newRow += '</tr>';
 						$("#table_body").append(newRow);
 					});
+					sortTable();
 				} else {
 					$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
 				}
@@ -375,7 +376,30 @@ $(document).ready(function (){
 	});
 	
 	recursiveFillGraph(12);
+	
+	$('#sortSelect').change(function() {
+		sortTable();
+	});
+	
+	$('#radioAsc').change(function() {
+		sortTable();
+	});
+	
+	$('#radioDsc').change(function() {
+		sortTable();
+	});
 });
+
+function sortTable() {
+	var column = $('#sortSelect').val();
+	var asc;
+	if ($('#radioAsc').is(':checked')) {
+		asc = 'asc';
+	} else {
+		asc = 'dec';
+	}
+	Sort(column, asc);
+}
 
 String.prototype.insert = function (index, string) {
   if (index > 0)
@@ -385,7 +409,7 @@ String.prototype.insert = function (index, string) {
 };
 
 function Sort(col, dir) {
-    var rows = $('#myTable tbody  tr').get();
+    var rows = $('#themeTable tbody  tr').get();
 
     rows.sort(function (a, b) {
         if (col == 2) {
