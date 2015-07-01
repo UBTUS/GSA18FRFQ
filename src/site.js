@@ -390,19 +390,6 @@ $(document).ready(function (){
 	});
 });
 
-function sortTable() {
-	var column = $('#sortSelect').val();
-	var asc;
-	if ($('#radioAsc').is(':checked')) {
-		asc = 'asc';
-	} else {
-		asc = 'dec';
-	}
-	console.log('pre sort');
-	Sort(column, asc);
-	console.log('post sort');
-}
-
 String.prototype.insert = function (index, string) {
   if (index > 0)
     return this.substring(0, index) + string + this.substring(index, this.length);
@@ -423,6 +410,8 @@ function Sort(col, dir) {
             var B = $(b).children('td').eq(col).text().toUpperCase();
         }
 
+		console.log(a);
+		console.log(b);
 
         if (A < B) {
             return dir == "dec" ? 1 : -1;
@@ -437,5 +426,18 @@ function Sort(col, dir) {
     $.each(rows, function (index, row) {
         $('#myTable').children('tbody').append(row);
     });
+}
+
+function sortTable() {
+	var column = $('#sortSelect').val();
+	var asc;
+	if ($('#radioAsc').is(':checked')) {
+		asc = 'asc';
+	} else {
+		asc = 'dec';
+	}
+	console.log('pre sort');
+	Sort(column, asc);
+	console.log('post sort');
 }
 
