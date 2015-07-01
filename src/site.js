@@ -398,7 +398,9 @@ function sortTable() {
 	} else {
 		asc = 'dec';
 	}
+	console.log('pre sort');
 	Sort(column, asc);
+	console.log('post sort');
 }
 
 String.prototype.insert = function (index, string) {
@@ -409,7 +411,7 @@ String.prototype.insert = function (index, string) {
 };
 
 function Sort(col, dir) {
-    var rows = $('#themeTable tbody  tr').get();
+    var rows = $('#table_body tr').get();
 
     rows.sort(function (a, b) {
         if (col == 2) {
