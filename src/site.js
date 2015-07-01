@@ -366,3 +366,32 @@ String.prototype.insert = function (index, string) {
     return string + this;
 };
 
+function Sort(col, dir) {
+    var rows = $('#myTable tbody  tr').get();
+
+    rows.sort(function (a, b) {
+        if (col == 2) {
+            var A = new Date($(a).children('td').eq(col).text().toUpperCase());
+            var B = new Date($(b).children('td').eq(col).text().toUpperCase());
+        }
+        else {
+            var A = $(a).children('td').eq(col).text().toUpperCase();
+            var B = $(b).children('td').eq(col).text().toUpperCase();
+        }
+
+
+        if (A < B) {
+            return dir == "dec" ? 1 : -1;
+        }
+        if (A > B) {
+            return dir == "dec" ? -1 : 1;
+        }
+        return 0;
+
+    });
+
+    $.each(rows, function (index, row) {
+        $('#myTable').children('tbody').append(row);
+    });
+}
+
