@@ -16,6 +16,11 @@ a,a:visited {
   color:#fff
 }
 
+.table-responsive {
+	max-height: 300px;
+	overflow: hidden;
+}
+
 #usmap {
 	display: block;
 	margin-left: auto;
