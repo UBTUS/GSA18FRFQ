@@ -16,7 +16,7 @@
 
 **5.Selinium** [Evidence] (https://github.com/UBTUS/GSA18FRFQ/tree/master/tests) :  Apache License 2.0
 
-**6.html-proofer** [https://github.com/UBTUS/GSA18FRFQ/blob/master/config.xml] : MIT License
+**6.html-proofer** [Evidence] (https://github.com/UBTUS/GSA18FRFQ/blob/master/config.xml) : MIT License
 
 ##Web Server:
 
