@@ -7,7 +7,7 @@ This food recall information helps people to clarify whether any of their recent
 
 ##### Technical Approach :
 
-We successfully implemented this project with Agile development methodology. All basic features for this prototype(Minimum Viable Product)
+We successfully implemented this project with Agile Scrum development methodology. All basic features for this prototype(Minimum Viable Product)
 is planned and executed in first sprint (5 day). Additional features are added in second sprint(4 day).
 
 Project is initiated with approval from higher management to implement prototype for public use with fda food data in compliance 
@@ -45,35 +45,26 @@ We followed same approach for Sprint 2 to implement additional features to submi
 
 RFQ Requirement evidence links:
 
-a. assigned one leader, gave that person authority and responsibility and held that person
-accountable for the quality of the prototype submitted
+a. [Assigned one leader] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Agile%20Team%20Roles%20and%20Responsibilities.md).
 
-b. assembled a multidisciplinary and collaborative team that includes at a minimum two of
-the labor categories limited to the Development Pool labor categories to develop the
-prototype as quoted in Attachment C. The quoter’s proposed mix of labor categories and
-level of effort for its working prototype, as reflected in Attachment C, shall be evaluated
-to assess the quoter’s understanding and capability to supply agile delivery services
+b. [Assembled a multidisciplinary and collaborative team.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Agile%20team%20labor%20category%20mapping.md)
 
-c. used at least five modern and open-source technologies, regardless of architectural layer
-(frontend, backend etc)
+c. [used at least five modern and open-source technologies.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/OpenSource_Technologies.md)
 
-d. deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as a Service
-(PaaS) provider, and indicated which provider was used
+d. [deployed the prototype on an Infrastructure as a Service (IaaS) or PaaS] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Misc/Hosting_Provider_Info.png)
 
-e. wrote unit tests for their code
+e. [wrote unit tests for their code] (https://github.com/UBTUS/GSA18FRFQ/tree/master/tests)
 
-f. set up or used a continuous integration system to automate the running of tests and
-continuously deployed their code to their IaaS or PaaS provider
+f. [set up or used a continuous integration system] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Build%20Screenshots/BuildConfigurationOptions.png) http://usfoodrecall.com:8080/
+ 
+g. set up or used configuration management.
 
-g. set up or used configuration management
+h. [set up or used continuous monitoring.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Misc/aws_cloudwatch_monitoring.png)
 
-h. set up or used continuous monitoring
+i. [deploy their software in a container.] 
 
-i. deploy their software in a container (i.e., utilized operating-system-level virtualization)
+j. [used an iterative approach, where feedback informed subsequent work or versions of the prototype] (https://docs.google.com/forms/d/14nCy5Tw1gKcr2rgcAWZTE_FyqwA8LvUlVEysy4W0sy0/viewanalytics)
 
-j. used an iterative approach, where feedback informed subsequent work or versions of the prototype
+k. [provided sufficient documentation to install and run their prototype.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/User_Manual.md)
 
-k. provided sufficient documentation to install and run their prototype on another machine
-
-l. prototype and underlying platforms used to create and run the prototype are openly
-licensed and free of charge
+l. [Openly licensed and free of charge prototype and underlying platforms.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/OpenSource_Technologies.md)
