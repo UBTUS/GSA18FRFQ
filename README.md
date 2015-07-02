@@ -45,35 +45,26 @@ We followed same approach for Sprint 2 to implement additional features to submi
 
 RFQ Requirement evidence links:
 
-a. assigned one leader, gave that person authority and responsibility and held that person
-accountable for the quality of the prototype submitted
+a. [Assigned one leader] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Agile%20Team%20Roles%20and%20Responsibilities.md).
 
-b. assembled a multidisciplinary and collaborative team that includes at a minimum two of
-the labor categories limited to the Development Pool labor categories to develop the
-prototype as quoted in Attachment C. The quoter’s proposed mix of labor categories and
-level of effort for its working prototype, as reflected in Attachment C, shall be evaluated
-to assess the quoter’s understanding and capability to supply agile delivery services
+b. assembled a multidisciplinary and collaborative team.
 
-c. used at least five modern and open-source technologies, regardless of architectural layer
-(frontend, backend etc)
+c. used at least five modern and open-source technologies
 
-d. deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as a Service
-(PaaS) provider, and indicated which provider was used
+d. deployed the prototype on an Infrastructure as a Service (IaaS) or PaaS
 
 e. wrote unit tests for their code
 
-f. set up or used a continuous integration system to automate the running of tests and
-continuously deployed their code to their IaaS or PaaS provider
+f. set up or used a continuous integration system
 
 g. set up or used configuration management
 
 h. set up or used continuous monitoring
 
-i. deploy their software in a container (i.e., utilized operating-system-level virtualization)
+i. deploy their software in a container 
 
 j. used an iterative approach, where feedback informed subsequent work or versions of the prototype
 
-k. provided sufficient documentation to install and run their prototype on another machine
+k. provided sufficient documentation to install and run their prototype.
 
-l. prototype and underlying platforms used to create and run the prototype are openly
-licensed and free of charge
+l. Openly licensed and free of charge prototype and underlying platforms.
