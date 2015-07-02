@@ -7,7 +7,7 @@ This food recall information helps people to clarify whether any of their recent
 
 ##### Technical Approach :
 
-We successfully implemented this project with Agile development methodology. All basic features for this prototype(Minimum Viable Product)
+We successfully implemented this project with Agile Scrum development methodology. All basic features for this prototype(Minimum Viable Product)
 is planned and executed in first sprint (5 day). Additional features are added in second sprint(4 day).
 
 Project is initiated with approval from higher management to implement prototype for public use with fda food data in compliance 
