@@ -171,6 +171,7 @@ a,a:visited {
 	padding-left: 25px;
 	background-color: rgba(255, 255, 255, .5);
 	border-radius: 3px;
+	text-indent: 25px;
 }
 
 .feedEkList {
