@@ -9,7 +9,7 @@ defining and prioritizing product backlog. Product owner have complete authority
 
 ##Role : * Scrum Master *
 
-Certified scrum master is selected as team facilitator. Primary responsible to conduct and log sprint planning,daily scrum , review and 
+Certified scrum master is selected as team facilitator. Primarly responsible to conduct sprint planning,daily scrum , review and 
 retrospective meetings. Scrum master is point of contact for any team impediments. Scrum master should redirect any decision making issues to
 Product Owner. Scrum master must check team have sufficient mix of skills to deliver product and 
 supporting tools such as continuous integration server and test driven development practices are in place.

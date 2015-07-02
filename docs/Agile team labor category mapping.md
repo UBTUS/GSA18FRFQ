@@ -1,9 +1,23 @@
-## Agile team labor category mapping
+## Agile team labor category mapping and profiles
 
 ### Product Owner
 
-#### Labor Category : Product 
+**Link profile**
 
-## Scrum Master
+### Scrum Master
 
-## Team
+**Scrum Profile**
+
+### Team
+
+#### Labor Category : Technical Architect
+
+**Link Profile**
+
+#### Labor Category : Front End Web Developer
+
+**Link Profile**
+
+#### Labor Category : DevOps Engineer
+
+**Link Profile**
