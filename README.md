@@ -47,24 +47,24 @@ RFQ Requirement evidence links:
 
 a. [Assigned one leader] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Agile%20Team%20Roles%20and%20Responsibilities.md).
 
-b. assembled a multidisciplinary and collaborative team.
+b. [Assembled a multidisciplinary and collaborative team.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Agile%20team%20labor%20category%20mapping.md)
 
-c. used at least five modern and open-source technologies
+c. [used at least five modern and open-source technologies.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/OpenSource_Technologies.md)
 
-d. deployed the prototype on an Infrastructure as a Service (IaaS) or PaaS
+d. [deployed the prototype on an Infrastructure as a Service (IaaS) or PaaS] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Misc/Hosting_Provider_Info.png)
 
-e. wrote unit tests for their code
+e. [wrote unit tests for their code] (https://github.com/UBTUS/GSA18FRFQ/tree/master/tests)
 
-f. set up or used a continuous integration system
+f. [set up or used a continuous integration system] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Build%20Screenshots/BuildConfigurationOptions.png) http://usfoodrecall.com:8080/
+ 
+g. set up or used configuration management.
 
-g. set up or used configuration management
+h. [set up or used continuous monitoring.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Misc/aws_cloudwatch_monitoring.png)
 
-h. set up or used continuous monitoring
+i. [deploy their software in a container.] 
 
-i. deploy their software in a container 
+j. [used an iterative approach, where feedback informed subsequent work or versions of the prototype] (https://docs.google.com/forms/d/14nCy5Tw1gKcr2rgcAWZTE_FyqwA8LvUlVEysy4W0sy0/viewanalytics)
 
-j. used an iterative approach, where feedback informed subsequent work or versions of the prototype
+k. [provided sufficient documentation to install and run their prototype.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/User_Manual.md)
 
-k. provided sufficient documentation to install and run their prototype.
-
-l. Openly licensed and free of charge prototype and underlying platforms.
+l. [Openly licensed and free of charge prototype and underlying platforms.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/OpenSource_Technologies.md)
