@@ -156,7 +156,7 @@ function generateUSMap() {
 
 		'click': function (event, data) {
 			$('html, body').animate({
-				scrollTop: $("#searchBox").siblings("h1").offset().top - 75
+				scrollTop: $("#searchHeader").offset().top - 75
 			}, 500);
 			var fullStateName = $.grep(statePairs, function(e) {
 				return e.abbreviation === data.name; 
