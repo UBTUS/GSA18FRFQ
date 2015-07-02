@@ -241,7 +241,6 @@ $(document).ready(function (){
 		$('#shareTwitter').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(shareUrl) + '&text=Recall%20Information%20for%20' + encodeURIComponent($('#searchTextbox').val()) + '&via=UBTUS');
 		$('#shareFacebook').attr('href', 'https://facebook.com/sharer.php?u=' + encodeURIComponent(shareUrl));
 		$('#shareGoogle').attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(shareUrl));
-		$('#shareDiv').show();
 		$('#searchURL').val(shareUrl);
 
 		$.get(searchUrl,
@@ -262,14 +261,17 @@ $(document).ready(function (){
 						$("#table_body").append(newRow);
 					});
 					sortTable();
+					$('#shareDiv').show();
 				} else {
 					$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
+					$('#shareDiv').hide();
 				}
 			},
 			'json'
 		).fail(function() {
 			$("#table_body").empty();
 			$("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
+			$('#shareDiv').hide();
 		});
 	}
 	
