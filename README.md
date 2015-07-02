@@ -1,6 +1,6 @@
 ##### Application URL : http://www.usfoodrecall.com
 
-We developed user friendly , mobile device compatible web application for general public , using FDA food recalls and enforcement data.
+We developed user friendly , [mobile device compatible] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Screenshots) web application for general public , using FDA food recalls and enforcement data.
 This applications helps people to find FDA recalled food products in their state , also nataionwide recalled food products.
 
 This food recall information helps people to clarify whether any of their recent sickenss is due to consumption of recalled product.
@@ -26,7 +26,7 @@ Agile team identified required tasks for each finalized user story for first spr
 Team started implementing Sprint backlog items and updating progress to each other in daily scrum meeting. [Daily scrum standup] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/2.%20Daily%20Scrum) meeting was
 conducted everyday morning. Important meeting points are noted by scrum master and followedup with respective parties for resolution.
 
-We closely worked with product owner and demonstrated product features as soon as they are ready. This process helps us to build
+We closely worked with product owner and end users during product development. We took their feedback at every step. This process helps us to build
 product in accordance to user needs and mindset. We automated code integration , test execution and application 
 build with [Continuous integration server] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Build%20Screenshots) (Jenkins).
 
