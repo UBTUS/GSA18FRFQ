@@ -8,12 +8,15 @@ A Class I recall is a dangerous or defective product that predictably could caus
 A Class II recall is a product that might cause a temporary health problem, or pose only a slight threat of a serious nature. Example: a drug that is under-strength but that is not used to treat life-threatening situations.
 A Class III recall is a product that is unlikely to cause any adverse health reaction, but that violate FDA labelling or manufacturing laws. Examples include: a minor container defect and lack of English labelling in a retail food.
 
-#I want to return my recalled purchae; what is the process?
-
-#How do I obtain a refund?
+#I want to return my recalled purchase; what is the process?
+If you have purchased a product that appears on this list of recalls, take note of the recall number displayed in the search results and contact the customer service desk of whichever retail chain you purchased the item from. Typically, they will refund your purchase. Note that some chains may require the original receipt.
+If the retailer that sold you the defective product does not offer you a refund, contact the recalling firm listed in the search results. They will be able to offer you additional information.
 
 #Are there health concerns with consuming the recalled product?
+Class I and Class II recalls present a significant risk of health concerns. Class III recalls may present health concerns if you are allergic to the contents of a mislabelled product. 
 
 #Can I sign up for automatic alerts when a product is recalled?
+We do not currently offer any sort of alerts for food recalls. The FDA offers an [RSS feed](http://www.fda.gov/AboutFDA/ContactFDA/StayInformed/RSSFeeds/FoodSafety/rss.xml), also available on our site, that lists recently recalled products.
 
 #Should I consult a doctor if I consumed the recalled product?
+If you have consumed a product under a Class I or Class II recall, we strongly encourage you to contact a doctor. If you have consumed a product under a Class III recall that contains an allergen you have reacted to in the past or if you feel any adverse affects after consuming the product, we encourage you to consult a doctor.
