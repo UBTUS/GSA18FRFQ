@@ -3,9 +3,9 @@ Date and Time : Jun 18 2015  9:00:00 AM
 ##### Completed items:
 * Product Backlog refinement and prioritization by Product Owner
 * Defined acceptance criteria for user stories.
-* Select User stories for Sprint based on Product owner prioritazaion.
+* Finalized User stories for Sprint based on Product owner prioritazaion.
 * Allocation of story points to user stories targeted for first sprint. 
-* Prepared sprint backlog with all required tasks in correspondence to each user story. 
+* Prepared sprint backlog with all possible tasks in correspondence to each user story. 
 
 #####Meeting Notes
 1. Need to draft agile technical approach we are using for RFQ submission , not more than 750 words.
