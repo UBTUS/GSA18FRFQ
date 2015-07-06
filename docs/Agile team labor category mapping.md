@@ -2,22 +2,21 @@
 
 ### Product Owner
 
-**Link profile**
+####GSA Labor Category : Product Manager
+####Name	       : Honaker, Charles D
 
 ### Scrum Master
 
-**Scrum Profile**
+####GSA Labor Category : Agile Coach
+####Name	       : Chandrajeet A Desai
 
-### Team
+### Team Members
 
-#### Labor Category : Technical Architect
+####GSA Labor Category : Technical Architect
+####Name	       : Balaji Chode
 
-**Link Profile**
+####GSA Labor Category : DevOps Engineer
+####Name	       : Jesse Grabowski
 
-#### Labor Category : Front End Web Developer
-
-**Link Profile**
-
-#### Labor Category : DevOps Engineer
-
-**Link Profile**
+####GSA Labor Category : Front End Web Developer
+####Name	       : Igor Kobylianskyi
