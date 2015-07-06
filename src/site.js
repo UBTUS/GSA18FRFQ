@@ -176,8 +176,8 @@ function showPie(state) {
     var searchUrl = 'https://api.fda.gov/food/enforcement.json?search=state="' + state + '"&count=classification.exact';
     $.get(searchUrl, function (data) {
 
-        if ($("#pieChart").css('display') == 'none') {
-            $("#pieChart").show();
+        if ($("#pieContainer").css('display') == 'none') {
+            $("#pieContainer").show();
             var ctx = document.getElementById("pieChart").getContext("2d");
 
             var PieData = [{
