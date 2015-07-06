@@ -40,8 +40,9 @@ This Agile approach enabled delivery of the prototype for testing in advance of 
 All feedback received from end users was implemented and new feature requests were documented under wishlist. This human centric  
 process improved usability and value of the application.
 
-On last day of sprint Scrum master conducted [Sprint review meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/3.%20Sprint%20Review) and demonstarted product to product owner and selected end users. Product owner
-validated each user story against acceptance criteria then provided signoff to user stories. 
+The Scrum Master facilitated the [sprint review meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/3.%20Sprint%20Review) to officially demonstrate prototype to Product Owner 
+and selected end users on last day of sprint. Product owner
+validated each user story with defined acceptance criteria and provided signoff to user stories. 
 
 Team also had [retrospective meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/4.%20Sprint%20Retrospective) on last day and discussed implementation procedure on completed sprint.
 Team also noticed alternative ways to handle sprint tasks for better team performace.All discussions are logged and shared with team.
