@@ -1,4 +1,4 @@
-## Agile team labor category mapping and profiles
+## Agile scrum team labor category mapping
 
 ### Product Owner
 
@@ -20,3 +20,4 @@
 
 ####GSA Labor Category : Front End Web Developer
 ####Name	       : Igor Kobylianskyi
+

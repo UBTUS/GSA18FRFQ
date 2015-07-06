@@ -1,7 +1,7 @@
 ##### Application URL : http://www.usfoodrecall.com
 
-We developed an interactive web application for general public to search FDA food recalls and enforcement data.
-This application helps people to find FDA recalled food products in their state , also nataionwide recalled food products.People can use this 
+We developed an interactive web application for the general public to search FDA food recalls and enforcement data.
+This application helps the general public to identfy FDA recalled food products nationalwide as well as in their home state.People can use this 
 information to clarify whether any of their recent sickenss is due to consumption of recalled product.
 
 This prototype gives additional convenience to users with [mobile compatibility] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Screenshots).
