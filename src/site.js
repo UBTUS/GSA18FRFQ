@@ -61,7 +61,7 @@ var statePairs = [
 ];
 var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 var locationCriteria = '"Nationwide"';
-var searchUrl = "";
+var searchUrl = "http://www.usfoodrecall.com/#information";
 
 $.extend($.easing,
 {
