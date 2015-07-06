@@ -42,13 +42,14 @@ process improved usability and value of the application.
 
 The Scrum Master facilitated the [sprint review meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/3.%20Sprint%20Review) to officially demonstrate prototype to Product Owner 
 and selected end users on last day of sprint. Product owner
-validated each user story with defined acceptance criteria and provided signoff to user stories. 
+validated each user story with defined acceptance criteria and provided signoff. 
 
-Team also had [retrospective meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/4.%20Sprint%20Retrospective) on last day and discussed implementation procedure on completed sprint.
-Team also noticed alternative ways to handle sprint tasks for better team performace.All discussions are logged and shared with team.
+The Scrum Master also facilitated [Sprint Retrospective meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/4.%20Sprint%20Retrospective) on last day 
+ reviewed implementation procedure, discussed alternative ways to handle sprint tasks for optimum team performace.
+ All action items were logged and shared with team.
 
 
-We followed same approach for Sprint 2 to implement additional features to submitted prototype.
+We followed similar Agile approach for Sprint 2 to implement additional features to submitted prototype.
 
 
 RFQ Requirement evidence links:
