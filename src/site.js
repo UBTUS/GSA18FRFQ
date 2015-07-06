@@ -181,31 +181,31 @@ function showPie(state) {
             var ctx = document.getElementById("pieChart").getContext("2d");
 
             var PieData = [{
-                value: data[0].count,
+                value: data.results[0].count,
                 color: "#F7464A",
                 highlight: "#FF5A5E",
-                label: data[0].term
+                label: data.results[0].term
             },
             {
-                value: data[1].count,
+                value: data.results[1].count,
                 color: "#46BFBD",
                 highlight: "#5AD3D1",
-                label: data[1].term
+                label: data.results[1].term
             },
             {
-                value: data[2].count,
+                value: data.results[2].count,
                 color: "#FDB45C",
                 highlight: "#FFC870",
-                label: data[2].term
+                label: data.results[2].term
             }];
             pieChart = new Chart(ctx).Pie(PieData, {
                 responsive: true
             });
         }
         else {
-            pieChart.segments[1].value = data[0].count;
-            pieChart.segments[2].value = data[1].count;
-            pieChart.segments[3].value = data[2].count;
+            pieChart.segments[1].value = data.results[0].count;
+            pieChart.segments[2].value = data.results[1].count;
+            pieChart.segments[3].value = data.results[2].count;
             pieChart.update();
         }
 
