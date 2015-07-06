@@ -278,6 +278,13 @@ $(document).ready(function () {
 						"recordsTotal": Math.min(d.meta.results.total, 5010),
 						"recordsFiltered": Math.min(d.meta.results.total, 5010)
 					});
+				},
+				"error": function() {
+					callback({
+						"data": [],
+						"recordsTotal": 0,
+						"recordsFiltered": 0
+					});
 				}
 			});
 		}
