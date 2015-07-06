@@ -300,7 +300,7 @@ $(document).ready(function () {
 
     function doSearch(myUrl) {
 		$('html, body').animate({
-			scrollTop: $("#themeTable").offset().top - 150
+			scrollTop: $("#recallTable").offset().top - 150
 		}, 500);
 		
 
