@@ -50,11 +50,17 @@ To add or change a selenium test case, you must simply modify the test xml files
 
 ###Setting up the Continuous Integration Environment
 
-Setting up the continuous integration server on Ubuntu from scratch is tedious, but fairly simple. Notes for the set-up process can be found below. Additional set-up may be required within the jenkins control panels, as needed.
+Setting up a mirror of our configuration server is very easy if you have an existing installation of [Fabric](http://www.fabfile.org/). Simply download our fabfile, cd to the directory you placed it in, and run the following commands.
 
+<<<<<<< HEAD
+	fab install_all
+	
+You will be prompted for a host name and user account on which to install our stack. After installation is complete, you will need to set up jenkins for your specific domain. We supply a sample configuration document in this repository.
+=======
 	apt-get install python-setuptools  # for easy_install
 	easy_install pip
 	pip install fabric
 
 
 Please note that the only significantly abnormal part of this process is the headless selenium environment. Leaving this out omits the post deployment testing, but results in a significantly easier setup.
+>>>>>>> e3ffd808cddece21138eb57316cb510a84fb80a8
