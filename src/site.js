@@ -338,6 +338,7 @@ $(document).ready(function () {
             searchUrl += previousDateString + "+TO+" + currentDateString + "]";
         }
 		searchUrl = decodeURIComponent(searchUrl);
+		console.log(searchUrl);
 
         var shareUrl = 'http://www.usfoodrecall.com?search=' + encodeURIComponent(searchUrl) + "/#information";
 
