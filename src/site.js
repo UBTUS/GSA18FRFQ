@@ -175,6 +175,9 @@ var pieChart;
 function showPie(state) {
     var searchUrl = 'https://api.fda.gov/food/enforcement.json?search=state="' + state + '"&count=classification.exact';
     $.get(searchUrl, function (data) {
+        var fullStateName = $.grep(statePairs, function (e) {
+            return e.abbreviation === state;
+        })[0].name;
 
         if ($("#pieContainer").css('display') == 'none') {
             $("#pieContainer").show();
@@ -208,6 +211,7 @@ function showPie(state) {
             pieChart.segments[2].value = data.results[2].count;
             pieChart.update();
         }
+        $("#pieHeader").html(fullStateName + " statistics");
 
     });
 }
