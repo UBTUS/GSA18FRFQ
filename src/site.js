@@ -256,8 +256,9 @@ $(document).ready(function () {
                 "defaultContent": ''
             },
 			{"data": "recall_number"},
-			{"data": "reason_for_recall"},
-			{"data": "product_description"}
+			{"data": "product_description"},
+			{"data": "reason_for_recall"}
+			
 		],
 		"ordering": false,
 		"filter": false,
