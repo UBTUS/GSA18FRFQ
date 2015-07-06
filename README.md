@@ -36,9 +36,9 @@ We recorded and implemented their feedback at every stage. This process helped u
 the product in accordance with user expectations and mindset. We automated code integration , test execution and application 
 build with [Continuous integration server] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Build%20Screenshots) (Jenkins).
 
-This process enabled us to deliver prototype to the end users for beta testing on the third day of first sprint. 
-All feedback received from end users was implemented and new feature requests were documented under wishlist. This human centric design 
-process improved usability and enhanced value of application.
+This Agile approach enabled delivery of the prototype for testing in advance of planned timeline. 
+All feedback received from end users was implemented and new feature requests were documented under wishlist. This human centric  
+process improved usability and value of the application.
 
 On last day of sprint Scrum master conducted [Sprint review meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/3.%20Sprint%20Review) and demonstarted product to product owner and selected end users. Product owner
 validated each user story against acceptance criteria then provided signoff to user stories. 
