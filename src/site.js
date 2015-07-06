@@ -244,18 +244,73 @@ $(document).ready(function () {
         $('#usmap').replaceWith('<div id="usmap"></div>');
         generateUSMap();
     });
+	
+	table = $('#recallTable').DataTable( {
+        "processing": true,
+		"serverSide": true,
+		"columns": [
+			{
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ''
+            },
+			{"data": "recall_number"},
+			{"data": "reason_for_recall"},
+			{"data": "product_description"}
+		],
+		"ordering": false,
+		"filter": false,
+		"pagingType": "full_numbers",
+		"ajax": function(data, callback, settings) {
+			$.ajax({
+				cache: true,
+				"url": "https://api.fda.gov/food/enforcement.json",
+				"data": {
+					"limit": data.length,
+					"skip": data.start,
+					"search": searchUrl
+				},
+				"success": function(d) {
+					console.log(d);
+					callback({
+						"data": d.results,
+						"recordsTotal": Math.min(d.meta.results.total, 5010),
+						"recordsFiltered": Math.min(d.meta.results.total, 5010)
+					});
+				}
+			});
+		}
+    } );
+	$('#recallTable tbody').on('click', 'td.details-control', function() {
+		var tr = $(this).closest('tr');
+        var row = table.row( tr );
+ 
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatChildRow(row.data()) ).show();
+            tr.addClass('shown');
+        }
+	});
 
-    function doSearch(myUrl) {
-        $('html, body').animate({
-            scrollTop: $("#themeTable").offset().top - 150
-        }, 500);
+    function doSearch(myUrl, scroll) {
+		if (scroll) {
+			$('html, body').animate({
+				scrollTop: $("#themeTable").offset().top - 150
+			}, 500);
+		}
 
         var searchValue = $('#searchTextbox').val().replace(/\s/g, "+");
 
         if (myUrl) {
             searchUrl = myUrl;
         } else {
-            searchUrl = 'https://api.fda.gov/food/enforcement.json?search=status:"Ongoing"+AND+(distribution_pattern:' + locationCriteria + ')+AND+(';
+            searchUrl = 'status:"Ongoing"+AND+(distribution_pattern:' + locationCriteria + ')+AND+(';
             if ($('#radioDesc').is(':checked')) {
                 searchUrl += "product_description:" + '"' + searchValue + '"';
             } else if ($('#radioManu').is(':checked')) {
@@ -282,8 +337,6 @@ $(document).ready(function () {
             var previousDateString = (previousDate.getMonth() == 0 ? previousDate.getFullYear() - 1 : previousDate.getFullYear()) + "-" + (previousDate.getMonth() == 0 ? 12 : previousDate.getMonth()) + "-" + 1;
 
             searchUrl += previousDateString + "+TO+" + currentDateString + "]";
-
-            searchUrl += "&limit=10";
         }
 
         var shareUrl = 'http://www.usfoodrecall.com?search=' + encodeURIComponent(searchUrl) + "/#information";
@@ -293,7 +346,7 @@ $(document).ready(function () {
         $('#shareGoogle').attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(shareUrl));
         $('#searchURL').val(shareUrl);
 
-        $.get(searchUrl,
+       /* $.get(searchUrl,
 			function (data) {
 			    $("#table_body").empty();
 			    if (data.results.length > 0) {
@@ -322,7 +375,8 @@ $(document).ready(function () {
 		    $("#table_body").empty();
 		    $("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
 		    $('#shareDiv').hide();
-		});
+		}); */
+		table.ajax.refresh();
     }
 
     $('#searchButton').click(function () {
@@ -487,4 +541,41 @@ function sortTable() {
     }
     Sort(column, asc);
 }
+
+function formatChildRow(d) {
+		return '<table border="0" style="margin: 10px; width: calc(100% - 20px)">'+
+			'<tr>'+
+				'<td>Recall Number:</td>'+
+				'<td>'+d.recall_number+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Reason for Recall:</td>'+
+				'<td>'+d.reason_for_recall+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Distribution:</td>'+
+				'<td>'+d.distribution_pattern+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Recall Initiation Date:</td>'+
+				'<td>'+d.recall_initiation_date+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Product Description:</td>'+
+				'<td>'+d.product_description+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Recalling Firm:</td>'+
+				'<td>'+d.recalling_firm+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Classification:</td>'+
+				'<td>'+d.classification+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Code Info:</td>'+
+				'<td>'+d.code_info+'</td>'+
+			'</tr>'+
+		'</table>';
+	}
 

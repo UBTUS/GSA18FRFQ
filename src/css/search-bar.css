@@ -301,3 +301,26 @@ only screen and (max-width: 760px),
 	.searchform > button:hover {
 		opacity:.9;
 	}
+	
+	td.details-control {
+    background: url('details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('details_close.png') no-repeat center center;
+}
+
+.dataTable {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.dataTable > tbody > tr > th, .dataTable > tbody > tr > td {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dataTable > tbody > tr > td > table {
+	white-space: normal;
+}
