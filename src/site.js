@@ -273,7 +273,7 @@ $(document).ready(function () {
 					"search": searchUrl
 				},
 				"success": function(d) {
-					console.log(d);
+					$('#shareDiv').show();
 					callback({
 						"data": d.results,
 						"recordsTotal": Math.min(d.meta.results.total, 5010),
@@ -281,6 +281,7 @@ $(document).ready(function () {
 					});
 				},
 				"error": function() {
+					$('#shareDiv').hide();
 					callback({
 						"data": [],
 						"recordsTotal": 0,
@@ -355,36 +356,6 @@ $(document).ready(function () {
         $('#shareGoogle').attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(shareUrl));
         $('#searchURL').val(shareUrl);
 
-       /* $.get(searchUrl,
-			function (data) {
-			    $("#table_body").empty();
-			    if (data.results.length > 0) {
-			        $.each(data.results, function (index, datab) {
-			            var newRow = '<tr class="' + (datab.classification == 'Class I' ? 'tr-red' : datab.classification == 'Class II' ? 'tr-orange' : 'tr-yellow') + '">';
-			            newRow += '<td>' + datab.product_description + '</td>';
-			            newRow += '<td>' + datab.reason_for_recall + '</td>';
-			            newRow += '<td>' + datab.recall_initiation_date.insert(6, "-").insert(4, "-") + '</td>';
-			            newRow += '<td>' + datab.recall_number + '</td>';
-			            newRow += '<td>' + datab.recalling_firm + '</td>';
-			            newRow += '<td>' + datab.classification + '</td>';
-			            newRow += '<td>' + datab.code_info + '</td>';
-			            newRow += '<td>' + datab.distribution_pattern + '</td>';
-			            newRow += '</tr>';
-			            $("#table_body").append(newRow);
-			        });
-			        sortTable();
-			        $('#shareDiv').show();
-			    } else {
-			        $("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
-			        $('#shareDiv').hide();
-			    }
-			},
-			'json'
-		).fail(function () {
-		    $("#table_body").empty();
-		    $("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
-		    $('#shareDiv').hide();
-		}); */
 		table.ajax.reload();
     }
 
