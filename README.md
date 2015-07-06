@@ -8,18 +8,23 @@ This prototype is designed and developed to be easily accessible and convenient 
 
 ##### Technical Approach :
 
-Management approved the implementation and allocation of resources for the GSA FDA RFQ prototype in accordance to the published guidelines. 
+Management approved the implementation and allocation of resources for the GSA FDA RFQ prototype in accordance with the published guidelines. 
 
-We successfully implemented this project using Agile scrum development methodology. All basic features for this prototype(Minimum Viable Product)
-were planned,prioritized and executed in the first sprint (5 days). Additional features were implemented in the second sprint(5 days).
+This project was successfully implemented using Agile scrum development methodology. 
 
+Minimum Viable Product features were planned,prioritized and executed in the first sprint (5 days). 
+Upon extension of the RFQ deadline we planned and implemented the second sprint(5 days) with additional features.
 
-We formed 5 member cross-functional agile team with Product Owner , Scrum Master and 3 Team members. Team members are Technical Architect , 
-Front End Web Designer and Dev Ops Engineer. Product Manager is made accountable for prototype backlog definition,prioritization and quality delivery.
+We assembled a five member cross-functional agile team consisting of Product Owner , Scrum Master and three Team members 
+(Technical Architect , Front End Web Designer and Dev Ops Engineer). 
 
-Scrum master conducted [Sprint planning meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/1.%20Sprint%20Planning) and explained product backlog items (User stories) for prototype to team. Product owner also prioritized
-and defined acceptance criteria for user stories then Agile team played planning poker and provided points for each user story selected for first sprint. 
-Team throughly discussed and provided estimated story points withh all team members acceptance. Some of user stories are pushed back to product backlog 
+The Product Owner acted as the decision maker , accountable for complete prototype backlog definition,prioritization and ontime quality delivery within budget.
+
+The Scrum master conducted  the first [Sprint planning meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/1.%20Sprint%20Planning) 
+and explained the product backlog items (User stories) to the team. The Product owner also prioritized
+and defined acceptance criteria for user stories then the Agile team members played planning poker and provided points 
+for each user story selected for the first sprint. 
+The Team discussed in detail and provided estimated story points withh all team members acceptance. Some of user stories are pushed back to product backlog 
 with product owners approval as estimated story points exceeds team velocity.
 Agile team identified required tasks for each finalized user story for first sprint and prepared sprint backlog.
 
