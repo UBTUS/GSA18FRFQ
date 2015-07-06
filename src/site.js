@@ -161,7 +161,7 @@ function generateUSMap() {
             var fullStateName = $.grep(statePairs, function (e) {
                 return e.abbreviation === data.name;
             })[0].name;
-            locationCriteria = '"' + data.name + '"+distribution_pattern:"' + fullStateName + '"+distribution_pattern:"Nationwide"';
+            locationCriteria = '"' + data.name + '" distribution_pattern:"' + fullStateName + '" distribution_pattern:"Nationwide"';
             $('#searchAreaDisplay').html('Searching ' + fullStateName);
 
             showPie(data.name);
