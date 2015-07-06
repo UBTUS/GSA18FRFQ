@@ -29,10 +29,7 @@ Some of the PBI's were pushed back to product backlog with product owners approv
 The Agile team identified required tasks for each PBI in the first sprint and defined sprint backlog.
 
 The Scrum Master facilitated the [daily scrum meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/2.%20Daily%20Scrum) in which the team announced their individual progress,tasks on hand and potential road blocks 
-to fellow team members. 
-
-Team started implementing User Stories and updated progress to each other in daily scrum meeting facilitated by Scrum Master. [Daily scrum standup] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/2.%20Daily%20Scrum) meeting was
-conducted everyday morning. Important meeting points are noted by scrum master and followedup with respective parties for resolution.
+to fellow team members. Important meeting points are noted by scrum master and followedup with respective parties for resolution.
 
 Team closely worked with product owner and end users during product development. We took their feedback at every step. This process helps us to build
 product in accordance to user needs and mindset. We automated code integration , test execution and application 
