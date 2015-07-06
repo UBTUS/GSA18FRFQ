@@ -61,7 +61,7 @@ g. [set up or used configuration management.](https://github.com/UBTUS/USFoodRec
 
 h. [set up or used continuous monitoring.] (https://github.com/UBTUS/GSA18FRFQ/blob/master/docs/Misc/aws_cloudwatch_monitoring.png)
 
-i. [deploy their software in a container.] 
+i. [deploy their software in a container.] (https://github.com/UBTUS/USFoodRecall/blob/master/docker-apache-image/usfoodrecall-docker-container.md)
 
 j. [used an iterative approach, where feedback informed subsequent work or versions of the prototype] (https://docs.google.com/forms/d/14nCy5Tw1gKcr2rgcAWZTE_FyqwA8LvUlVEysy4W0sy0/viewanalytics)
 

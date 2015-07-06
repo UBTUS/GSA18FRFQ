@@ -66,7 +66,8 @@ def install_all():
 	sudo("gem install jekyll")
 	apt_get("zlib1g-dev")
 	sudo("gem install html-proofer")
-	
+	sudo('echo installing docker')
+    sudo("wget -qO- https://get.docker.com/ | sh")
 	
 def hello():
 	print("Hello world!")
