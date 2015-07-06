@@ -182,20 +182,20 @@ function showPie(state) {
 
             var PieData = [{
                 value: data.results[0].count,
-                color: "#F7464A",
-                highlight: "#FF5A5E",
+                color: "rgba(255,0,0,0.2)",
+                highlight: "rgba(255,0,0,1)",
                 label: data.results[0].term
             },
             {
                 value: data.results[1].count,
-                color: "#46BFBD",
-                highlight: "#5AD3D1",
+                color: "rgba(255,255,0,0.2)",
+                highlight: "rgba(255,255,0,1)",
                 label: data.results[1].term
             },
             {
                 value: data.results[2].count,
-                color: "#FDB45C",
-                highlight: "#FFC870",
+                color: "rgba(0,255,0,0.2)",
+                highlight: "rgba(0,255,0,1)",
                 label: data.results[2].term
             }];
             pieChart = new Chart(ctx).Pie(PieData, {
