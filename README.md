@@ -8,11 +8,11 @@ This prototype is designed and developed to be easily accessible and convenient 
 
 ##### Technical Approach :
 
-We successfully implemented this project using Agile scrum development methodology. All basic features for this prototype(Minimum Viable Product)
-were planned and executed in first sprint (5 day). Additional features were added in second sprint(5 day).
+Management approved the implementation and allocation of resources for the GSA FDA RFQ prototype in accordance to the published guidelines. 
 
-Project is initiated with an approval from higher management to implement prototype for public use with fda food data in compliance 
-to GSA RFQ guidelines.
+We successfully implemented this project using Agile scrum development methodology. All basic features for this prototype(Minimum Viable Product)
+were planned,prioritized and executed in the first sprint (5 days). Additional features were implemented in the second sprint(5 days).
+
 
 We formed 5 member cross-functional agile team with Product Owner , Scrum Master and 3 Team members. Team members are Technical Architect , 
 Front End Web Designer and Dev Ops Engineer. Product Manager is made accountable for prototype backlog definition,prioritization and quality delivery.
