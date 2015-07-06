@@ -21,12 +21,11 @@ We assembled a five member cross-functional agile team consisting of Product Own
 The Product Owner acted as the decision maker , accountable for complete prototype backlog definition,prioritization and ontime quality delivery within budget.
 
 The Scrum master conducted  the first [Sprint planning meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/1.%20Sprint%20Planning) 
-and explained the product backlog items (User stories) to the team. The Product owner also prioritized
-and defined acceptance criteria for user stories then the Agile team members played planning poker and provided points 
-for each user story selected for the first sprint. 
-The Team discussed in detail and provided estimated story points withh all team members acceptance. Some of user stories are pushed back to product backlog 
-with product owners approval as estimated story points exceeds team velocity.
-Agile team identified required tasks for each finalized user story for first sprint and prepared sprint backlog.
+in which the product owner explained , prioritized and defined acceptance criteria for the first sprint product backlog items (PBI/User stories).
+
+The Team members played planning poker for PBI's and provided estimated story points with all team members acceptance. 
+Some of the PBI's were pushed back to product backlog with product owners approval as the estimated story points exceeded team velocity.
+The Agile team identified required tasks for each PBI in the first sprint and prepared sprint backlog.
 
 Team started implementing User Stories and updating progress to each other in daily scrum meeting facilitated by Scrum Master. [Daily scrum standup] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/2.%20Daily%20Scrum) meeting was
 conducted everyday morning. Important meeting points are noted by scrum master and followedup with respective parties for resolution.
