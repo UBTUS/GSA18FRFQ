@@ -6,6 +6,8 @@ information can be used to determine if any of their recent illness is due to th
 
 This prototype is [mobile compatible] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Screenshots) for user convenience .
 
+This prototype is designed and developed to be easily accessible and convenient to use on any [mobile device] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Screenshots). 
+
 ##### Technical Approach :
 
 We successfully implemented this project with Agile Scrum development methodology. All basic features for this prototype(Minimum Viable Product)
