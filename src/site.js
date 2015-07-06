@@ -218,6 +218,59 @@ function showPie(state) {
     });
 }
 
+
+function doSearch(myUrl) {
+	$('html, body').animate({
+		scrollTop: $("#recallTable").offset().top - 150
+	}, 500);
+	
+
+	var searchValue = $('#searchTextbox').val().replace(/\s/g, "+");
+
+	if (myUrl) {
+		searchUrl = myUrl;
+	} else {
+		searchUrl = 'status:"Ongoing" AND (distribution_pattern:' + locationCriteria + ') AND (';
+		if ($('#radioDesc').is(':checked')) {
+			searchUrl += "product_description:" + '"' + searchValue + '"';
+		} else if ($('#radioManu').is(':checked')) {
+			searchUrl += "product_description:" + '"' + searchValue + '" ' + "recalling_firm:" + '"' + searchValue + '"';
+		} else if ($('#radioBatc').is(':checked')) {
+			searchUrl += "code_info:" + '"' + searchValue + '" ' + "product_description:" + '"' + searchValue + '"';
+		} else {
+			searchUrl += '"' + searchValue + '"';
+		}
+		searchUrl += ') AND recall_initiation_date:[';
+
+		var currentDate = new Date();
+		var previousDate;
+		if ($('#radioMonth').is(':checked')) {
+			previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, currentDate.getDate());
+		} else if ($('#radioTwoMonth').is(':checked')) {
+			previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 2, currentDate.getDate());
+		} else if ($('#radioSixMonth').is(':checked')) {
+			previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 6, currentDate.getDate());
+		} else {
+			previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 12, currentDate.getDate());
+		}
+		var currentDateString = (currentDate.getMonth() == 0 ? currentDate.getFullYear() - 1 : currentDate.getFullYear()) + "-" + (currentDate.getMonth() == 0 ? 12 : currentDate.getMonth()) + "-" + 1;
+		var previousDateString = (previousDate.getMonth() == 0 ? previousDate.getFullYear() - 1 : previousDate.getFullYear()) + "-" + (previousDate.getMonth() == 0 ? 12 : previousDate.getMonth()) + "-" + 1;
+
+		searchUrl += previousDateString + " TO " + currentDateString + "]";
+	}
+	searchUrl = decodeURIComponent(searchUrl);
+	console.log(searchUrl);
+
+	var shareUrl = 'http://www.usfoodrecall.com?search=' + encodeURIComponent(searchUrl) + "/#information";
+
+	$('#shareTwitter').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(shareUrl) + '&text=Recall%20Information%20for%20' + encodeURIComponent($('#searchTextbox').val()) + '&via=UBTUS');
+	$('#shareFacebook').attr('href', 'https://facebook.com/sharer.php?u=' + encodeURIComponent(shareUrl));
+	$('#shareGoogle').attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(shareUrl));
+	$('#searchURL').val(shareUrl);
+
+	table.ajax.reload();
+}
+
 $(document).ready(function () {
 
     $('nav li a').navScroller();
@@ -308,57 +361,7 @@ $(document).ready(function () {
         }
 	});
 
-    function doSearch(myUrl) {
-		$('html, body').animate({
-			scrollTop: $("#recallTable").offset().top - 150
-		}, 500);
-		
-
-        var searchValue = $('#searchTextbox').val().replace(/\s/g, "+");
-
-        if (myUrl) {
-            searchUrl = myUrl;
-        } else {
-            searchUrl = 'status:"Ongoing" AND (distribution_pattern:' + locationCriteria + ') AND (';
-            if ($('#radioDesc').is(':checked')) {
-                searchUrl += "product_description:" + '"' + searchValue + '"';
-            } else if ($('#radioManu').is(':checked')) {
-                searchUrl += "product_description:" + '"' + searchValue + '" ' + "recalling_firm:" + '"' + searchValue + '"';
-            } else if ($('#radioBatc').is(':checked')) {
-                searchUrl += "code_info:" + '"' + searchValue + '" ' + "product_description:" + '"' + searchValue + '"';
-            } else {
-                searchUrl += '"' + searchValue + '"';
-            }
-            searchUrl += ') AND recall_initiation_date:[';
-
-            var currentDate = new Date();
-            var previousDate;
-            if ($('#radioMonth').is(':checked')) {
-                previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, currentDate.getDate());
-            } else if ($('#radioTwoMonth').is(':checked')) {
-                previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 2, currentDate.getDate());
-            } else if ($('#radioSixMonth').is(':checked')) {
-                previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 6, currentDate.getDate());
-            } else {
-                previousDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 12, currentDate.getDate());
-            }
-            var currentDateString = (currentDate.getMonth() == 0 ? currentDate.getFullYear() - 1 : currentDate.getFullYear()) + "-" + (currentDate.getMonth() == 0 ? 12 : currentDate.getMonth()) + "-" + 1;
-            var previousDateString = (previousDate.getMonth() == 0 ? previousDate.getFullYear() - 1 : previousDate.getFullYear()) + "-" + (previousDate.getMonth() == 0 ? 12 : previousDate.getMonth()) + "-" + 1;
-
-            searchUrl += previousDateString + " TO " + currentDateString + "]";
-        }
-		searchUrl = decodeURIComponent(searchUrl);
-		console.log(searchUrl);
-
-        var shareUrl = 'http://www.usfoodrecall.com?search=' + encodeURIComponent(searchUrl) + "/#information";
-
-        $('#shareTwitter').attr('href', 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(shareUrl) + '&text=Recall%20Information%20for%20' + encodeURIComponent($('#searchTextbox').val()) + '&via=UBTUS');
-        $('#shareFacebook').attr('href', 'https://facebook.com/sharer.php?u=' + encodeURIComponent(shareUrl));
-        $('#shareGoogle').attr('href', 'https://plus.google.com/share?url=' + encodeURIComponent(shareUrl));
-        $('#searchURL').val(shareUrl);
-
-		table.ajax.reload();
-    }
+    
 
     $('#searchButton').click(function () {
         doSearch();
