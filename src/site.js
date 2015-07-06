@@ -309,17 +309,17 @@ $(document).ready(function () {
         if (myUrl) {
             searchUrl = myUrl;
         } else {
-            searchUrl = 'status:"Ongoing"+AND+(distribution_pattern:' + locationCriteria + ')+AND+(';
+            searchUrl = 'status:"Ongoing" AND (distribution_pattern:' + locationCriteria + ') AND (';
             if ($('#radioDesc').is(':checked')) {
                 searchUrl += "product_description:" + '"' + searchValue + '"';
             } else if ($('#radioManu').is(':checked')) {
-                searchUrl += "product_description:" + '"' + searchValue + '"+' + "recalling_firm:" + '"' + searchValue + '"';
+                searchUrl += "product_description:" + '"' + searchValue + '" ' + "recalling_firm:" + '"' + searchValue + '"';
             } else if ($('#radioBatc').is(':checked')) {
-                searchUrl += "code_info:" + '"' + searchValue + '"+' + "product_description:" + '"' + searchValue + '"';
+                searchUrl += "code_info:" + '"' + searchValue + '" ' + "product_description:" + '"' + searchValue + '"';
             } else {
                 searchUrl += '"' + searchValue + '"';
             }
-            searchUrl += ')+AND+recall_initiation_date:[';
+            searchUrl += ') AND recall_initiation_date:[';
 
             var currentDate = new Date();
             var previousDate;
@@ -335,7 +335,7 @@ $(document).ready(function () {
             var currentDateString = (currentDate.getMonth() == 0 ? currentDate.getFullYear() - 1 : currentDate.getFullYear()) + "-" + (currentDate.getMonth() == 0 ? 12 : currentDate.getMonth()) + "-" + 1;
             var previousDateString = (previousDate.getMonth() == 0 ? previousDate.getFullYear() - 1 : previousDate.getFullYear()) + "-" + (previousDate.getMonth() == 0 ? 12 : previousDate.getMonth()) + "-" + 1;
 
-            searchUrl += previousDateString + "+TO+" + currentDateString + "]";
+            searchUrl += previousDateString + " TO " + currentDateString + "]";
         }
 		searchUrl = decodeURIComponent(searchUrl);
 		console.log(searchUrl);
