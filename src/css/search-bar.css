@@ -22,98 +22,14 @@ a,a:visited {
 	-webkit-box-shadow:0 4px 9px rgba(0,0,0,.37);
 }
 
-.table-responsive  > .scrolling {
-	max-height: 300px;
-	overflow-y: scroll;
-	border: 1px solid rgba(0, 0, 0, .5);
-}
-
 #usmap {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.table-responsive table {
-	width: 100%;
-	border-collapse: collapse;
-}
-
-.tr-red {
-	background: #ffeeee;
-}
-
-.tr-orange {
-	background: #fff6ee;
-}
-
-.tr-yellow {
-	background: #ffffee;
-}
-
-.table-responsive table th { 
-  font-weight: bold; 
-}
-
-.table-responsive table td, .table-responsive table th { 
-  padding: 6px; 
-  border: 1px solid #777; 
-  text-align: left; 
-  width: 100%;
-}
-
 /* Force table to not be like tables anymore */
-	.table-responsive table, .table-responsive table thead, .table-responsive table tbody, .table-responsive table th, .table-responsive table td, .table-responsive table tr { 
-		display: block; 
-		word-wrap: break-word;
-     /* Non standard for webkit */
-     word-break: break-word;
-
--webkit-hyphens: auto;
-   -moz-hyphens: auto;
-        hyphens: auto;
-	}
 	
-	/* Hide table headers (but not display: none;, for accessibility) */
-	.table-responsive table thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	
-	.table-responsive table tr { border: 1px solid #ccc; }
-	
-	.table-responsive table td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 160px; 
-	}
-	
-	.table-responsive table td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		width: 145px;
-		top: 6px;
-		left: 6px;
-		padding-right: 10px; 
-		white-space: nowrap;
-	}
-	
-	/*
-	Label the data
-	*/
-	.table-responsive table td:nth-of-type(1):before { content: "Product"; }
-	.table-responsive table td:nth-of-type(2):before { content: "Recall Reason"; }
-	.table-responsive table td:nth-of-type(3):before { content: "Recall Initiation Date"; }
-	.table-responsive table td:nth-of-type(4):before { content: "Recall Number"; }
-	.table-responsive table td:nth-of-type(5):before { content: "Recalling Firm"; }
-	.table-responsive table td:nth-of-type(6):before { content: "Classification"; }
-	.table-responsive table td:nth-of-type(7):before { content: "Code Info"; }
-	.table-responsive table td:nth-of-type(8):before { content: "Distribution Pattern"; }
-
 .rssFeedContainer {
 	float: right;
 	width: 470px;
