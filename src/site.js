@@ -203,9 +203,9 @@ function showPie(state) {
             });
         }
         else {
-            pieChart.segments[1].value = data.results[0].count;
-            pieChart.segments[2].value = data.results[1].count;
-            pieChart.segments[3].value = data.results[2].count;
+            pieChart.segments[0].value = data.results[0].count;
+            pieChart.segments[1].value = data.results[1].count;
+            pieChart.segments[2].value = data.results[2].count;
             pieChart.update();
         }
 
