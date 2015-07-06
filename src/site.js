@@ -298,12 +298,11 @@ $(document).ready(function () {
         }
 	});
 
-    function doSearch(myUrl, scroll) {
-		if (scroll) {
-			$('html, body').animate({
-				scrollTop: $("#themeTable").offset().top - 150
-			}, 500);
-		}
+    function doSearch(myUrl) {
+		$('html, body').animate({
+			scrollTop: $("#themeTable").offset().top - 150
+		}, 500);
+		
 
         var searchValue = $('#searchTextbox').val().replace(/\s/g, "+");
 
@@ -376,7 +375,7 @@ $(document).ready(function () {
 		    $("#table_body").append($('<tr>').html('<td colspan="8">Your query yielded no results.</td>'));
 		    $('#shareDiv').hide();
 		}); */
-		table.ajax.refresh();
+		table.ajax.reload();
     }
 
     $('#searchButton').click(function () {
