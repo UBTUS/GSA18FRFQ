@@ -180,6 +180,7 @@ function showPie(state) {
         })[0].name;
 
         if ($("#pieContainer").css('display') == 'none') {
+            $("#pieHeader").show();
             $("#pieContainer").show();
             var ctx = document.getElementById("pieChart").getContext("2d");
 
