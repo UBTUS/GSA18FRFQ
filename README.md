@@ -8,46 +8,35 @@ This prototype is designed and developed to be easily accessible and convenient 
 
 ##### Technical Approach :
 
-Management approved the implementation and allocation of resources for the GSA FDA RFQ prototype in accordance with the published guidelines. 
+Management approved the implementation and allocation of resources for the GSA FDA RFQ (4QTFHS150004) prototype in accordance with the published guidelines. 
 
 This project was successfully implemented using Agile scrum development methodology. 
 
-Minimum Viable Product features were planned,prioritized and executed in the first sprint (5 days). 
-Upon extension of the RFQ deadline we planned and implemented the second sprint(5 days) with additional features.
+Minimum Viable Product features[https://github.com/UBTUS/USFoodRecall/tree/master/docs/Agile%20Artifacts/Product%20Backlog] were planned,prioritized and executed in the first sprint (5 days). 
+Upon extension of the RFQ deadline we planned and implemented the second sprint(5 days) with [additional features] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/Agile%20Artifacts/Product%20Backlog).
 
-We assembled a five member cross-functional agile team consisting of Product Owner , Scrum Master and three Team members 
+A five member cross-functional agile team was formed,consisting of Product Owner,Scrum Master and three Team members 
 (Technical Architect , Front End Web Designer and Dev Ops Engineer). 
 
-The Product Owner acted as the decision maker , accountable for complete prototype backlog definition,prioritization and ontime quality delivery within budget.
+The Product Owner acted as the decision maker,accountable for complete prototype backlog definition,prioritization and quality delivery. Product Owner used FDA datasets and API calls mentioned in RFQ (4QTFHS150004) as base for Product Backlog definition.
 
-The Scrum master conducted  the first [Sprint planning meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/1.%20Sprint%20Planning) 
-in which the product owner explained , prioritized and defined acceptance criteria for the first sprint product backlog items (PBI/User stories).
+The Scrum master conducted  [Sprint planning meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/1.%20Sprint%20Planning) 
+in which the product owner explained , prioritized and defined acceptance criteria for the first sprint Product Backlog Items (PBI). Scrum Master made accountable for on 
+time delivery of product within allocated budget. The Team members played planning poker for PBI's and provided estimated story points with all team members acceptance. 
+Some of the PBI's were pushed back to product backlog with product owners approval as the estimated story points exceeded team velocity.Team velocity was based on 
+past projects performance. The Agile team identified required tasks for each PBI in the first sprint and defined [sprint backlog] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/Agile%20Artifacts/Sprint%20Backlog).
 
-The Team members played planning poker for PBI's and provided estimated story points with all team members acceptance. 
-Some of the PBI's were pushed back to product backlog with product owners approval as the estimated story points exceeded team velocity.
+The Scrum Master facilitated the [daily scrum meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/2.%20Daily%20Scrum) in which the team announced their completed, planned tasks and potential road blocks (impediments) to 
+fellow team members.Important meeting points were noted by scrum master and followed up with the concerned individuals for a resolution on potential impediments.Agile Team was also updated Scrum Board while they were making progress. 
 
-The Agile team identified required tasks for each PBI in the first sprint and defined sprint backlog.
+The Agile Team worked closely with the Product Owner throughout product development. We recorded and implemented feedback at every stage. This process helped us build
+the product in accordance with user expectations and mindset. We automated code integration,test execution and application build with [Continuous integration server] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Build%20Screenshots) (Jenkins).
+Feedback on planned features were implemented and New feature requests from users feedback were documented under wishlist. This human centric process improved usability and value of the application.
 
-The Scrum Master facilitated the [daily scrum meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/2.%20Daily%20Scrum) in which the team announced their individual progress,tasks on hand and potential road blocks 
-to fellow team members. Important meeting points were noted by scrum master and followed up with the concerned decision making individuals for a resolution on potential identified issues.
+Product owner validated each user story with defined acceptance criteria and provided signoff. The Scrum Master facilitated the [Sprint Demo / Sprint Review meeting ] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/3.%20Sprint%20Review) for the Product Owner to officially demonstrate prototype to end users on last day of sprint.
 
-The Agile Team worked closely with the product owner and end users throughout product development. 
-We recorded and implemented their feedback at every stage. This process helped us build
-the product in accordance with user expectations and mindset. We automated code integration , test execution and application 
-build with [Continuous integration server] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Build%20Screenshots) (Jenkins).
-
-This Agile approach enabled delivery of the prototype for testing in advance of planned timeline. 
-All feedback received from end users was implemented and new feature requests were documented under wishlist. This human centric  
-process improved usability and value of the application.
-
-The Scrum Master facilitated the [sprint review meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/3.%20Sprint%20Review) to officially demonstrate prototype to Product Owner 
-and selected end users on last day of sprint. Product owner
-validated each user story with defined acceptance criteria and provided signoff. 
-
-The Scrum Master also facilitated [Sprint Retrospective meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/4.%20Sprint%20Retrospective) on last day 
- reviewed implementation procedure, discussed alternative ways to handle sprint tasks for optimum team performace.
- All action items were logged and shared with team.
-
+[Sprint Retrospective meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/4.%20Sprint%20Retrospective) was facilitated by Scrum Master on last day and understood from team members on what went well and not and improvements to approach.
+The Scrum Master logged action items and shared with team.
 
 We followed similar Agile approach for Sprint 2 to implement additional features to submitted prototype.
 
