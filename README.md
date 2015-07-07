@@ -12,7 +12,7 @@ Management approved the implementation and allocation of resources for the GSA F
 
 This project was successfully implemented using Agile scrum development methodology. 
 
-(Minimum Viable Product features) [https://github.com/UBTUS/USFoodRecall/tree/master/docs/Agile%20Artifacts/Product%20Backlog] were planned,prioritized and executed in the first sprint (5 days). 
+[Minimum Viable Product features] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/Agile%20Artifacts/Product%20Backlog) were planned,prioritized and executed in the first sprint (5 days). 
 Upon extension of the RFQ deadline we planned and implemented the second sprint(5 days) with [additional features] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/Agile%20Artifacts/Product%20Backlog).
 
 A five member cross-functional agile team was formed,consisting of Product Owner,Scrum Master and three Team members 
