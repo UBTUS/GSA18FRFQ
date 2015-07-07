@@ -547,15 +547,15 @@ function formatChildRow(d) {
 			'</tr>'+
 			'<tr>'+
 				'<td>Product Description:</td>'+
-				'<td><b>'+d.product_description+'</b></td>'+
+				'<td style="font-weight: bold;">'+d.product_description+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>Reason for Recall:</td>'+
-				'<td><b>'+d.reason_for_recall+'</b></td>'+
+				'<td style="font-weight: bold;">'+d.reason_for_recall+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>Classification:</td>'+
-				'<td>'+d.classification+'<span title="' + classDesc + '" style="color: blue; cursor: pointer;" class="scrollToFaq"><i class="fa fa-question-circle"></i></span>'
+				'<td>'+d.classification+'&nbsp;<span title="' + classDesc + '" style="color: blue; cursor: pointer;" class="scrollToFaq"><i class="fa fa-question-circle"></i></span>'
 				+'</td>'+
 			'</tr>'+
 			'<tr>'+
