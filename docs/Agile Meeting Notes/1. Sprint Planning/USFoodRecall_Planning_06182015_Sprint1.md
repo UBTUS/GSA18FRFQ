@@ -11,5 +11,5 @@ Date and Time : Jun 18 2015  9:00:00 AM
 1. Need to draft agile technical approach we are using for RFQ submission , not more than 750 words.
 2. RFQ requires to provide evidence for all steps, so please keep evidence as you perform tasks to avoid rework.
 3. All team members must follow US digital service playbook checklist standards. Need to provide evidence as required.
-4. All web interfaces must be approved by Product Owner before starting development.
+4. All web interfaces must be dicussed with Product Owner before during development .
 5. Please escalate any roadblocks immediately as this is time critical project.

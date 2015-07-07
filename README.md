@@ -46,7 +46,7 @@ optimum team performace and approach to improvements. The Scrum Master logged ac
 
 We followed similar Agile approach for Sprint 2 to implement additional features to submitted prototype.
 
-We followed the [US Digital Services Playbook] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/US%20Digital%20Services%20Playbook) for this implementation. Taken actions were documented and  Playbook questionaire was answered.
+We followed the [US Digital Services Playbook] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/US%20Digital%20Services%20Playbook) for this implementation. Taken actions were documented and  Playbook questionaire were answered.
 
 RFQ Requirement evidence links:
 
