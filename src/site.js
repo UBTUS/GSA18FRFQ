@@ -541,7 +541,7 @@ function formatChildRow(d) {
 		} else if (d.classification == "Class III") {
 			classDesc = "Products that are unlikely to cause any adverse health reaction, but that violate FDA labelling or manufacturing laws. Examples include: a minor container defect and lack of English labelling in a retail food.";
 		}
-		return '<table border="0" style="margin: 10px; width: calc(100% - 20px); text-align: justify;">'+
+		return '<table border="0" style="margin: 10px; width: calc(100% - 20px); text-align: left;">'+
 			'<tr>'+
 				'<td>Recall Number:</td>'+
 				'<td>'+d.recall_number+'</td>'+
