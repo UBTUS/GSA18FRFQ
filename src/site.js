@@ -359,6 +359,11 @@ $(document).ready(function () {
             row.child( formatChildRow(row.data()) ).show();
             tr.addClass('shown');
         }
+		$('.scrollToFaq').click(function() {
+			$('html, body').animate({
+				scrollTop: $("#faqrss").offset().top
+			}, 500);
+		});
 	});
 
     
@@ -527,14 +532,31 @@ function sortTable() {
 }
 
 function formatChildRow(d) {
+		var classDesc = "";
+		if (d.classification == "Class I") {
+			classDesc = "Dangerous or defective products that predictably could cause serious health problems or death. Examples include: food found to contain botulinum toxin, food with undeclared allergens, a label mix-up on a lifesaving drug, or a defective artificial heart valve.";
+		} else if (d.classification == "Class II") {
+			classDesc = "Products that might cause a temporary health problem, or pose only a slight threat of a serious nature. Example: a drug that is under-strength but that is not used to treat life-threatening situations.";
+		} else if (d.classification == "Class III") {
+			classDesc = "Products that are unlikely to cause any adverse health reaction, but that violate FDA labelling or manufacturing laws. Examples include: a minor container defect and lack of English labelling in a retail food.";
+		}
 		return '<table border="0" style="margin: 10px; width: calc(100% - 20px)">'+
 			'<tr>'+
 				'<td>Recall Number:</td>'+
 				'<td>'+d.recall_number+'</td>'+
 			'</tr>'+
 			'<tr>'+
+				'<td>Product Description:</td>'+
+				'<td><b>'+d.product_description+'</b></td>'+
+			'</tr>'+
+			'<tr>'+
 				'<td>Reason for Recall:</td>'+
-				'<td>'+d.reason_for_recall+'</td>'+
+				'<td><b>'+d.reason_for_recall+'</b></td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Classification:</td>'+
+				'<td>'+d.classification+'<span title="' + classDesc + '" style="color: blue; cursor: pointer;" class="scrollToFaq"><i class="fa fa-question-circle"></i></span>'
+				+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>Distribution:</td>'+
@@ -545,16 +567,8 @@ function formatChildRow(d) {
 				'<td>'+d.recall_initiation_date+'</td>'+
 			'</tr>'+
 			'<tr>'+
-				'<td>Product Description:</td>'+
-				'<td>'+d.product_description+'</td>'+
-			'</tr>'+
-			'<tr>'+
 				'<td>Recalling Firm:</td>'+
 				'<td>'+d.recalling_firm+'</td>'+
-			'</tr>'+
-			'<tr>'+
-				'<td>Classification:</td>'+
-				'<td>'+d.classification+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>Code Info:</td>'+
