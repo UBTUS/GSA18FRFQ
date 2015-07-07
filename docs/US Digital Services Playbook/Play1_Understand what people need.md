@@ -37,7 +37,7 @@ and [Sprint Backlog] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%
 
 2. What user needs will this service address?
 
-*A*. Helps to find FDA food recall information information with different user friendly search criterias.
+*A*. Helps to find FDA food recall information with different user friendly search criterias.
 
 3. Why does the user want or need this service?
 

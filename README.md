@@ -41,11 +41,12 @@ Feedback on planned features were implemented and new feature requests from user
 
 Product owner validated each user story with defined acceptance criteria and provided signoff. The Scrum Master facilitated the [Sprint Demo / Sprint Review meeting ] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/3.%20Sprint%20Review) for the Product Owner to officially demonstrate the prototype to end users on last day of sprint.
 
-The Scrum Master also facilitated [Sprint Retrospective meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/4.%20Sprint%20Retrospective) on the last day reviewed implementation procedure, discussed alternative ways to handle sprint tasks for 
+The Scrum Master also facilitated the [Sprint Retrospective meeting] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/4.%20Sprint%20Retrospective) on the last day.The Team reviewed the implementation procedure, discussed alternative ways to handle sprint tasks for 
 optimum team performace and approach to improvements. The Scrum Master logged action items and shared with team.
 
 We followed similar Agile approach for Sprint 2 to implement additional features to submitted prototype.
 
+We followed the [US Digital Services Playbook] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/US%20Digital%20Services%20Playbook) for this implementation. Taken actions were documented and  Playbook questionaire was answered.
 
 RFQ Requirement evidence links:
 
