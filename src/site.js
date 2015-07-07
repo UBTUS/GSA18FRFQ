@@ -316,7 +316,7 @@ $(document).ready(function () {
 		],
 		"ordering": false,
 		"filter": false,
-		"pagingType": "full_numbers",
+		"pagingType": "simple",
 		"lengthChange": false,
 		"ajax": function(data, callback, settings) {
 			$.ajax({
