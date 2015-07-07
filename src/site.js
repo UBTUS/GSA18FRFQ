@@ -565,7 +565,7 @@ function formatChildRow(d) {
 			'</tr>'+
 			'<tr>'+
 				'<td>Recall Initiation Date:</td>'+
-				'<td>'+d.recall_initiation_date+'</td>'+
+				'<td>'+d.recall_initiation_date.insert(6, "-").insert(4, "-")+'</td>'+
 			'</tr>'+
 			'<tr>'+
 				'<td>Recalling Firm:</td>'+
