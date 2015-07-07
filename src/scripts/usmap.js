@@ -359,13 +359,7 @@
       
       
       
-      // Bind events
-      for(var state in this.labelHitAreas) {
-        this.labelHitAreas[state].toFront();
-        $(this.labelHitAreas[state].node).bind('mouseout', this._onMouseOutProxy);
-        $(this.labelHitAreas[state].node).bind('click', this._onClickProxy);
-        $(this.labelHitAreas[state].node).bind('mouseover', this._onMouseOverProxy);
-      }
+      
 	  
 	  var otherStates = {
 		HI: {x:295, y:560}, 
@@ -434,6 +428,14 @@
 		});
 		this.labelHitAreas[state].node.dataState = state;
 	}
+	
+	// Bind events
+      for(var state in this.labelHitAreas) {
+        this.labelHitAreas[state].toFront();
+        $(this.labelHitAreas[state].node).bind('mouseout', this._onMouseOutProxy);
+        $(this.labelHitAreas[state].node).bind('click', this._onClickProxy);
+        $(this.labelHitAreas[state].node).bind('mouseover', this._onMouseOverProxy);
+      }
     },
     
     /**
