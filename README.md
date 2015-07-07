@@ -12,8 +12,12 @@ Management approved the implementation and allocation of resources for the GSA F
 
 This project was successfully implemented using Agile scrum development methodology. 
 
-[Minimum Viable Product features] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/Agile%20Artifacts/Product%20Backlog) were planned,prioritized and executed in the first sprint (5 days). 
-Upon extension of the RFQ deadline we planned and implemented the second sprint(5 days) with [additional features] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/Agile%20Artifacts/Product%20Backlog).
+Minimum Viable Product features were planned,prioritized and executed in the first sprint (5 days). 
+Upon extension of the RFQ deadline we planned and implemented the second sprint(5 days) with additional features.
+
+[Product Backlog] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/Agile%20Artifacts/Product%20Backlog).
+
+[Sprint Backlog] (https://github.com/UBTUS/USFoodRecall/tree/master/docs/Agile%20Artifacts/Sprint%20Backlog).
 
 A five member cross-functional agile team was formed,consisting of Product Owner,Scrum Master and three Team members 
 (Technical Architect , Front End Web Designer and Dev Ops Engineer). 
@@ -31,7 +35,7 @@ fellow team members.Important meeting points were noted by scrum master and foll
 
 The Agile Team worked closely with the Product Owner throughout product development. We recorded and implemented feedback at every stage. This process helped us build
 the product in accordance with user expectations and mindset. We automated code integration,test execution and application build with [Continuous integration server] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Build%20Screenshots) (Jenkins).
-Feedback on planned features were implemented and New feature requests from users feedback were documented under wishlist. This human centric process improved usability and value of the application.
+Feedback on planned features were implemented and new feature requests from users feedback were documented under wishlist. This human centric process improved usability and value of the application.
 
 Product owner validated each user story with defined acceptance criteria and provided signoff. The Scrum Master facilitated the [Sprint Demo / Sprint Review meeting ] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Agile%20Meeting%20Notes/3.%20Sprint%20Review) for the Product Owner to officially demonstrate prototype to end users on last day of sprint.
 
