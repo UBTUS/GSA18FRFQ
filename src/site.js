@@ -164,7 +164,7 @@ function generateUSMap() {
             })[0].name;
             locationCriteria = '"' + data.name + '" distribution_pattern:"' + fullStateName + '" distribution_pattern:"Nationwide"';
             $('#searchAreaDisplay').html('Searching ' + fullStateName);
-			$('#recallNoticeHeader').text("Ongoing Food Recall Notices in " + (fullStateName.charAt(0) + fullStateName.toLowerCase.slice(1)));
+			$('#recallNoticeHeader').text("Ongoing Food Recall Notices in " + (fullStateName.charAt(0) + fullStateName.toLowerCase().slice(1)));
             showPie(data.name);
 			doSearch();
 
