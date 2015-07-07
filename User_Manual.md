@@ -34,7 +34,7 @@ This prototype was created using free and open source software. Because of the a
 
 ###Setting up Your Environment
 
-After installing the above windows applications (and properly configuring them according to installation instructions), working with this prototype is very easy. Using the git client, navigate to your desired directory and run the following command...
+After installing the above windows applications (and properly configuring them according to the installation instructions found in the above links), working with this prototype is very easy. Using the git client, navigate to your desired directory and run the following command...
 
 	git clone https://github.com/UBTUS/GSA18FRFQ.git
 	
