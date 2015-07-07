@@ -4,6 +4,7 @@
 
 + Jekyll (And Dependencies) - [All Platforms](http://jekyllrb.com/docs/installation/)
 + Apache2 Web Server - [Ubuntu 14.04](https://help.ubuntu.com/lts/serverguide/httpd.html)
++ Docker - [Docker](https://www.docker.com/)
 
 ###Building
 
@@ -18,9 +19,20 @@ The process of building the application, within the context of this prototype, i
 	
 ###Deploying
 
-The following instructions assume that you have successfully built the application and are suitably prepared to deploy it. We recommend clearing out the *html* directory or modifying this command depending on your set up.
+Our installation makes use of the Apache web server; hosting the prototype on a default Apache web server installation can be achieved by running the following command. (Note that you may have to clear out the html directory beforehand)
 
 	mv * /var/www/html #Apache2 web hosting directory
+	
+Optionally, you may make use of docker to implement operating system level virtualization. Docker can be configured to work with the Apache web server by using the following commands.
+
+	git clone https://github.com/bitnami/bitnami-docker-apache.git
+	cd bitnami-docker-apache
+	docker build -t bitnami/apache .
+	
+Once you've set up Docker to work with the Apache web server, launching the prototype through docker can be done by using the following commands. 
+
+	mkdir /app
+	docker run -d --name <instance name> -v /var/www/html:/app -P -p 80:80 -p 443:443 bitnami/apache
 	
 #Preparing a Development Environment
 
@@ -50,7 +62,7 @@ To add or change a selenium test case, you must simply modify the test xml files
 
 ###Setting up the Continuous Integration Environment
 
-Setting up a mirror of our configuration server is very easy if you have an existing installation of [Fabric](http://www.fabfile.org/). If you do not have Fabric installed, the following commands work for ubuntu.
+Setting up a mirror of our continuous integration server is very easy if you have an existing installation of [Fabric](http://www.fabfile.org/). If you do not have Fabric installed, the following commands work for ubuntu.
 
 	apt-get install fabric
 
