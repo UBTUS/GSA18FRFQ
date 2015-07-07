@@ -1,7 +1,9 @@
 ##### Application URL : http://www.usfoodrecall.com
 
 We developed an interactive web application for the general public to search FDA food recalls and enforcement data nationwide.
-This information can be used to determine if any of their recent illness is due to the consumption of the FDA recalled product.
+This information can be used to determine the name and description of FDA food recalled products that the general public might
+have in their home or might have an interest in purchasing for their consumption. It also helps to determine if any
+of their recent illness is due to the consumption of the FDA recalled product.
 
 This prototype is designed and developed to be easily accessible and convenient to use on any [mobile device] (https://github.com/UBTUS/GSA18FRFQ/tree/master/docs/Screenshots). 
 
